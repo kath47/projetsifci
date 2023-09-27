@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatDialog} from "@angular/material/dialog";
+import { DialogCfopComponent } from './dialog-cfop/dialog-cfop.component';
 
 /**
  * @title Table with pagination
@@ -12,18 +13,24 @@ import {MatDialog} from "@angular/material/dialog";
   templateUrl: './certification.component.html',
 
 })
+
 export class CertificationComponent implements AfterViewInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
+
+   //Table paginator
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   };
+
+
+  //Dialog construtor
   constructor(public dialog: MatDialog) {}
   openDialog(){
-    this.dialog.open();
+    this.dialog.open(DialogCfopComponent);
   }
 }
 

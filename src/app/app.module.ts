@@ -40,6 +40,7 @@ import { CertificatfComponent } from './transactions/certification/certificatf/c
 import { CertificatisoleeComponent } from './transactions/certification/certificatisolee/certificatisolee.component';
 import { FusioncfComponent } from './transactions/certification/fusioncf/fusioncf.component';
 import { MorcellementcfComponent } from './transactions/certification/morcellementcf/morcellementcf.component';
+import { DialogCfopComponent } from './transactions/certification/dialog-cfop/dialog-cfop.component';
 
 @NgModule({
   declarations: [
@@ -59,8 +60,11 @@ import { MorcellementcfComponent } from './transactions/certification/morcelleme
     CertificatfComponent,
     CertificatisoleeComponent,
     FusioncfComponent,
-    MorcellementcfComponent
+    MorcellementcfComponent,
+    DialogCfopComponent
   ],
+  entryComponnents[DialogCfopComponent],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -89,6 +93,7 @@ import { MorcellementcfComponent } from './transactions/certification/morcelleme
 
 
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
