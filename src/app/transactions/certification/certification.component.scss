@@ -1,0 +1,17 @@
+@import 'src/app/home/home.component.scss';
+
+
+.demo-table {
+    width: 100%;
+  }
+  
+  .demo-button-container {
+    padding-bottom: 16px;
+  }
+  
+  .demo-button + .demo-button {
+    margin-left: 8px;
+    background: #fb9101;
+  }
+
+  

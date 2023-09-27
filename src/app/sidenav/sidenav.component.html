@@ -1,0 +1,87 @@
+<mat-nav-list>
+    <div class="logo-py-4">
+        <img src=" " alt="compagny Logo">
+    </div>
+    <mat-divider></mat-divider>
+    <h2 class="mt-2">SIFCI</h2>
+    <a mat-list-item routerLink="/home" routerLinkActive="list-item-active" class="list">
+    <mat-icon>home</mat-icon> TABLEAU DE BORD
+    </a>
+    <a mat-list-item routerLink="/recherche" routerLinkActive="list-item-active"><mat-icon>search</mat-icon>Recherche</a>
+    
+    <!---------MENU DE LA TRANACTIONS----------->
+
+    <!-- <bouton mat-boutton [matMenuTriggerFor]="transactions"><mat-icon>repeat</mat-icon>Transactions</bouton>
+        <mat-menu #transactions="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="cf">Certificat Foncier</button>
+          <button mat-menu-item [matMenuTriggerFor]="dtv">Délimitation des territoires</button>
+          <button mat-menu-item [matMenuTriggerFor]="fvi">Contracts FVI</button>
+          <button mat-menu-item [matMenuTriggerFor]="cdc">Consolidation (CDC) </button>
+        </mat-menu>
+
+        <mat-menu #cf="matMenu" class="cf">
+          <button mat-menu-item>Création Certificat Foncier</button>
+          <button mat-menu-item>Création Certificat Foncier Demande Isolée</button>
+          <button mat-menu-item>Fusion Certificat Foncier</button>
+          <button mat-menu-item>Morcellement Certificat Foncier Demande Isolée</button>
+        </mat-menu>
+
+        <mat-menu #dtv="matMenu" class="dtv">
+          <button mat-menu-item>Délimitation des territoires de villages</button>
+          -- <button mat-menu-item>Autres...</button> --
+        </mat-menu>
+
+        <mat-menu #fvi="matMenu" class="fvi">
+          <button mat-menu-item>Conservation contrats FVI demande isolée</button>
+          <button mat-menu-item>Conservation de contrats FVI</button>
+        </mat-menu>
+
+        <mat-menu #cdc="matMenu" class="cdc">
+          <button mat-menu-item>CDC Pur : Morcellement Opération intégrées</button>
+          <button mat-menu-item>CDC Pur : Morcellement demande isolée</button>
+          <button mat-menu-item>CDC Pur : Contrat/Bail entier/Bail partiel </button>
+          <button mat-menu-item>CDC Pur : Contrat/Bail entier/Bail partiel demande isolée</button>
+          <button mat-menu-item>CDC S/Réserve : Immatriculation directe</button>
+          <button mat-menu-item>CDC S/Réserve : Immatriculation directe demande isolée </button>
+          <button mat-menu-item>CDC S/Réserve : Contrat/Bail/Morcellement</button>
+          <button mat-menu-item>CDC S/Réserve : Contrat/Bail/Morcellement demande isolée</button>
+        </mat-menu>
+
+        - <mat-menu #reptiles="matMenu">
+          <button mat-menu-item>Banded Day Gecko</button>
+          <button mat-menu-item>Banded Gila Monster</button>
+          <button mat-menu-item>Black Tree Monitor</button>
+          <button mat-menu-item>Blue Spiny Lizard</button>
+          <button mat-menu-item disabled>Velociraptor</button>
+        </mat-menu> 
+-->
+
+    
+
+    <mat-accordion>
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title routerLink="/transactions" routerLinkActive="list-item-active"><mat-icon>repeat</mat-icon>
+             Transactions
+            </mat-panel-title>
+            <mat-panel-description>
+
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <a mat-list-item routerLink="/certification" routerLinkActive="list-item-active">Certification</a>
+          <a mat-list-item routerLink="/delimitation" routerLinkActive="list-item-active">Délimitation</a>
+          <a mat-list-item routerLink="/contratualisation" routerLinkActive="list-item-active">Contratualisation</a> 
+          <a mat-list-item routerLink="/consolidation" routerLinkActive="list-item-active">Consolidation</a> 
+          
+
+        </mat-expansion-panel>
+      </mat-accordion>
+      
+    <a mat-list-item routerLink="/cartographie" routerLinkActive="list-item-active"><mat-icon>map_pin_drop</mat-icon>Cartographie</a>
+    <a mat-list-item routerLink="/statistiques" routerLinkActive="list-item-active"><mat-icon>equalizer</mat-icon>Statistiques</a>
+    <a mat-list-item routerLink="/administration" routerLinkActive="list-item-active"><mat-icon>settings</mat-icon>Administration</a> 
+
+
+  
+</mat-nav-list>

@@ -1,0 +1,26 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer{
+    width: 260px;
+    background: #30ae67;
+}
+
+mat-drawer-container{
+    height: 100%;
+}
+
+.container{
+    max-width: 100%;
+    padding: 1rem;
+}
+
+@media(min-width:768px){
+    .container{
+        margin: 0 auto;
+        max-width: 768px;
+    }
+}

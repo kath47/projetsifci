@@ -1,0 +1,224 @@
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-2">Certificat Foncier Opération intégrée</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute">
+            
+            <section>
+
+            <div class="gauche">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>Localisation</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>
+                    <label for="">Région : </label><br>
+                    <label for="">Département : </label><br>
+                    <label for="">Sous-préfecture : </label><br>
+                    <label for="">Village :</label>
+                  </p>
+                </mat-card-content>
+              </mat-card>
+            
+                <mat-card class="example-card">
+                    <mat-card-header>
+                    <mat-card-title>Infos sur la demande</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <p>
+                        <label for="">Enregistrée sous le n° :</label><br>
+                        <label for="">du :</label><br>
+                        <label for="">Date création :</label>
+                      </p>
+                    </mat-card-content>
+                   </mat-card>
+
+                   <mat-card class="example-card">
+                    <mat-card-header>
+                      <mat-card-title>Type de personne</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <p>
+                        <label for="">Type personne :</label><br><br>
+                        <label for="">Rôle demandeur :</label><br>
+
+                      </p>
+                    </mat-card-content>
+                  </mat-card>
+                
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                          <mat-card-title>Opérateur Technique Agrée</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content class="mat-elevation-z0">
+                          <p>
+                            <label for="">Nom du groupement :</label><br>
+                            <label for="">Adresse :</label><br>
+                            <label for="">Email :</label><br>
+                            <label for="">N° Téléphone :</label>
+                          </p>
+                        </mat-card-content>
+                      </mat-card>
+
+
+                </div>
+
+            <div class="droite">
+                    <mat-card class="card-droite">
+                    
+                        <mat-card-content>
+
+                            <!-- <ng-container [ngSwitch]="stepperOrientation | async">
+                                <div *ngSwitchCase="'horizontal'" style="font-size: 16px;">Renseignement concernat le demandeur</div>
+                                <div *ngSwitchCase="'vertical'" style="font-size: 16px;">Make your screen larger to see a horizontal stepper</div>
+                              </ng-container> -->
+                              
+                              <mat-stepper
+                                class="example-stepper"
+                                [orientation]="(stepperOrientation | async)!">
+                                <mat-step [stepControl]="firstFormGroup" label="Demande">
+
+                                  <form [formGroup]="firstFormGroup">
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Nom</mat-label>
+                                      <input matInput placeholder="Ex: Konan-Kan" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Prénom</mat-label>
+                                      <input matInput placeholder="Ex: Jérôme" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Date de naissance</mat-label>
+                                      <input type="text" matInput placeholder="Ex: 19/08/2023" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Lieu de naissance</mat-label>
+                                      <input matInput placeholder="Ex: Abidjan" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Nom du père</mat-label>
+                                      <input matInput placeholder="Nom et Prénom" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Nom de la mère </mat-label>
+                                      <input matInput placeholder="Nom et Prénom" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Nationalité</mat-label>
+                                      <mat-select>
+                                        <mat-option *ngFor="let state of Nationalite" [value]="state">{{state}}</mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Profession</mat-label>
+                                      <mat-select>
+                                        <mat-option *ngFor="let state of profession" [value]="state">{{state}}</mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Type pièce d'identité</mat-label>
+                                      <mat-select>
+                                        <mat-option *ngFor="let state of typepiece" [value]="state">{{state}}</mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>N° Pièce d'identité</mat-label>
+                                      <input matInput placeholder="Ex: CI001454758" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Date Pièce d'identité</mat-label>
+                                      <input type="date" matInput placeholder="Ex: 19/08/2023" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Résidence habituelle</mat-label>
+                                      <input matInput placeholder=" Ex: Danané" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Numéro de téléphone</mat-label>
+                                      <input type="tel" maxlength="14" matInput placeholder="+225 0707070707" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Agissant pour le compte</mat-label>
+                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Type d'Occupation</mat-label>
+                                      <mat-select>
+                                        <mat-option *ngFor="let state of typeoccupation" [value]="state">{{state}}</mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+
+                                  
+                                    <div class="uploadfile">
+                                      <label for="file" class="drop-container" id="drop-container">
+                                      <span>Déposez une copie de la pièce d'identité ici</span>
+                                       
+                                        <input type="file" accept="file/.pdf">
+                                      </label>
+                                    </div>
+                                    
+                                    <div>
+                                      <button class="btn-suivant" mat-button matStepperNext>Suivant</button>
+                                    </div>
+                                  </form>
+                                  
+                          <!--    Etape 2  du procecuss       -->
+                                </mat-step> 
+                                <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+                                  <form [formGroup]="secondFormGroup">
+                                    <mat-form-field >
+                                      <mat-label>Address</mat-label>
+                                      <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                             required>
+                                    </mat-form-field>
+                                    <div>
+                                      <button  class="btn-retour" mat-button matStepperPrevious>Retour</button>
+                                      <button class="btn-suivant" mat-button matStepperNext>Suivant</button>
+                                    </div>
+                                  </form>
+                                </mat-step>
+                                <mat-step [stepControl]="thirdFormGroup" label="Fill out your phone number">
+                                  <form [formGroup]="thirdFormGroup">
+                                    <mat-form-field>
+                                      <mat-label>Phone number</mat-label>
+                                      <input matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
+                                    </mat-form-field>
+                                    <div>
+                                      <button class="btn-retour" mat-button matStepperPrevious>Retour</button>
+                                      <button class="btn-suivant" mat-button matStepperNext>Suivant</button>
+                                    </div>
+                                  </form>
+                                </mat-step>
+                                <mat-step>
+                                  <ng-template matStepLabel>Done</ng-template>
+                                  <p>You are now done.</p>
+                                  <div>
+                                    <button mat-button matStepperPrevious>Retour</button>
+                                  </div>
+                                </mat-step>
+                              </mat-stepper>
+                              
+                            
+
+                        </mat-card-content>
+                      </mat-card>
+            </div>
+        </section>
+
+        </div>
+    </div>
+</div>
