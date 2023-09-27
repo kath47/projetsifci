@@ -2,7 +2,7 @@
     <div class="page__box p-3 mt-2">Certificat Foncier Opération intégrée</div>
     <div class="page__content shadow p-3 position-relative">
         <div class="page__content-data position-absolute">
-            
+
             <section>
 
             <div class="gauche">
@@ -19,7 +19,7 @@
                   </p>
                 </mat-card-content>
               </mat-card>
-            
+
                 <mat-card class="example-card">
                     <mat-card-header>
                     <mat-card-title>Infos sur la demande</mat-card-title>
@@ -45,7 +45,7 @@
                       </p>
                     </mat-card-content>
                   </mat-card>
-                
+
                     <mat-card class="example-card">
                         <mat-card-header>
                           <mat-card-title>Opérateur Technique Agrée</mat-card-title>
@@ -65,14 +65,9 @@
 
             <div class="droite">
                     <mat-card class="card-droite">
-                    
+
                         <mat-card-content>
 
-                            <!-- <ng-container [ngSwitch]="stepperOrientation | async">
-                                <div *ngSwitchCase="'horizontal'" style="font-size: 16px;">Renseignement concernat le demandeur</div>
-                                <div *ngSwitchCase="'vertical'" style="font-size: 16px;">Make your screen larger to see a horizontal stepper</div>
-                              </ng-container> -->
-                              
                               <mat-stepper
                                 class="example-stepper"
                                 [orientation]="(stepperOrientation | async)!">
@@ -162,32 +157,47 @@
                                       </mat-select>
                                     </mat-form-field>
 
-                                  
+
                                     <div class="uploadfile">
                                       <label for="file" class="drop-container" id="drop-container">
                                       <span>Déposez une copie de la pièce d'identité ici</span>
-                                       
+
                                         <input type="file" accept="file/.pdf">
                                       </label>
                                     </div>
-                                    
+
                                     <div>
                                       <button class="btn-suivant" mat-button matStepperNext>Suivant</button>
                                     </div>
                                   </form>
-                                  
+
                           <!--    Etape 2  du procecuss       -->
-                                </mat-step> 
+                                </mat-step>
                                 <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
                                   <form [formGroup]="secondFormGroup">
-                                    <mat-form-field >
-                                      <mat-label>Address</mat-label>
-                                      <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                                             required>
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Commissaire Enguêteur :</mat-label>
+                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Superficie:</mat-label>
+                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Date Ouverture Enquête :</mat-label>
+                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>N° de parcelle:</mat-label>
+                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline">
+                                      <mat-label>Date PV de Recenssement :</mat-label>
+                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
                                     </mat-form-field>
                                     <div>
-                                      <button  class="btn-retour" mat-button matStepperPrevious>Retour</button>
-                                      <button class="btn-suivant" mat-button matStepperNext>Suivant</button>
+                                      <button  class="btn-retour2" mat-button matStepperPrevious>Retour</button>
+                                      <button class="btn-suivant2" mat-button matStepperNext>Suivant</button>
                                     </div>
                                   </form>
                                 </mat-step>
@@ -211,8 +221,8 @@
                                   </div>
                                 </mat-step>
                               </mat-stepper>
-                              
-                            
+
+
 
                         </mat-card-content>
                       </mat-card>

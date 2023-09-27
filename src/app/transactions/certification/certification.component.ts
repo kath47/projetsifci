@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import {MatDialog} from "@angular/material/dialog";
 
 /**
  * @title Table with pagination
@@ -9,7 +10,7 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
   selector: 'app-certification',
   styleUrls: ['./certification.component.scss'],
   templateUrl: './certification.component.html',
-  
+
 })
 export class CertificationComponent implements AfterViewInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
@@ -19,6 +20,10 @@ export class CertificationComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  };
+  constructor(public dialog: MatDialog) {}
+  openDialog(){
+    this.dialog.open();
   }
 }
 
