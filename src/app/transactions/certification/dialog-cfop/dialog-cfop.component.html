@@ -1,1 +1,99 @@
-<p>dialog-cfop works!</p>
+ <div mat-dialog-title class="title">PARAMETRE DE LA DEMANDE</div> 
+
+<form action="">
+
+<div mat-dialog-content class="container"> 
+<div class="row">
+   <mat-form-field appearance="outline">
+    <mat-label>REGION</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let state of region" [value]="state">{{state}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  
+
+  <mat-form-field appearance="outline">
+    <mat-label>DEPARTEMENT</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let state of departement" [value]="state">{{state}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+ 
+  <mat-form-field appearance="outline">
+    <mat-label>SOUS-PREFECTURE</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let state of sprefecture" [value]="state">{{state}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="row">
+  <mat-form-field appearance="outline">
+    <mat-label>Village</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let state of region" [value]="state">{{state}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Type personne</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let state of typperson" [value]="state">{{state}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+ 
+  <mat-form-field appearance="outline">
+    <mat-label>Rôle du demandeur</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let state of rol" [value]="state">{{state}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+</div>
+
+            <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Numéro du dossier</mat-label>
+                <input type="number" matInput placeholder=" Ex: 000785" formControlName="firstCtrl" required>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>date demande</mat-label>
+                <input type="date" matInput placeholder=" Ex: 12/05/2023" formControlName="firstCtrl" required>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Type de personne</mat-label>
+                <input type="number" matInput placeholder=" Ex: 000785" formControlName="firstCtrl" required>
+              </mat-form-field>
+              </div>
+
+              <div class="row">
+              <mat-form-field appearance="outline">
+                <mat-label>Rôle du demandeur</mat-label>
+                <input type="number" matInput placeholder=" Ex: 000785" formControlName="firstCtrl" required>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Nom du groupement</mat-label>
+                <input  matInput placeholder=" Ex: 12/05/2023" formControlName="firstCtrl" required>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Adresse</mat-label>
+                <input type="number" matInput placeholder=" Ex: 000785" formControlName="firstCtrl" required>
+              </mat-form-field>
+            </div>   
+
+ </div> 
+<div class="btn" matDialogActions>
+    <button mat-raised-button>Annuler</button>
+    <button mat-raised-button routerLink="/certificatf" class="btn-color" >Confirmer</button>
+</div> 
+                                                                                                       
+</form>

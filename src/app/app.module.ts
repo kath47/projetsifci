@@ -2,17 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatRadioModule} from '@angular/material/radio';
+import { MatDialogModule} from '@angular/material/dialog';
+import { MatDatepickerModule} from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatInputModule} from  '@angular/material/input' ;
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCardModule} from '@angular/material/card';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatTableModule} from '@angular/material/table';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatStepperModule} from '@angular/material/stepper';
+import { MatInputModule} from  '@angular/material/input' ;
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatCardModule} from '@angular/material/card';
+import { MatPaginatorModule} from '@angular/material/paginator';
+import { MatTableModule} from '@angular/material/table';
+import { MatExpansionModule} from '@angular/material/expansion';
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -63,7 +64,8 @@ import { DialogCfopComponent } from './transactions/certification/dialog-cfop/di
     MorcellementcfComponent,
     DialogCfopComponent
   ],
-  entryComponnents[DialogCfopComponent],
+  
+  
 
   imports: [
     BrowserModule,
@@ -90,6 +92,7 @@ import { DialogCfopComponent } from './transactions/certification/dialog-cfop/di
     MatSelectModule,
     MatDatepickerModule,
     MatDialogModule,
+    MatRadioModule,
 
 
   ],

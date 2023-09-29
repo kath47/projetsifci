@@ -1,0 +1,29 @@
+.container{
+    padding-top: 10px;
+}
+
+
+
+
+.btn-color{
+    background: #fb9101;
+}
+
+.row{
+    display: flex;
+    gap: 10px;
+
+    mat-form-field{
+        width: 15rem;
+        margin: 2px;
+        padding: 2px;
+    }
+}
+
+.btn{
+    padding: 0px 25px 20px;
+
+    button{
+        flex: 1;
+    }
+}

@@ -5,6 +5,8 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {NgSwitch, NgSwitchCase, AsyncPipe,NgFor} from '@angular/common';
 import {FormBuilder, Validators} from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogCfopComponent } from '../dialog-cfop/dialog-cfop.component';
 
 @Component({
   selector: 'app-certificatf',
@@ -240,6 +242,10 @@ export class CertificatfComponent {
 'Zambienne',
 'Zimbabweenne',
   ];
+
+
+
+  
 }
 
 
