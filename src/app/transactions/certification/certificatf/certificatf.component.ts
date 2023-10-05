@@ -1,20 +1,19 @@
-import { Component } from '@angular/core';
-import {StepperOrientation} from '@angular/material/stepper';
-import {BreakpointObserver} from '@angular/cdk/layout';
-import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
-import {NgSwitch, NgSwitchCase, AsyncPipe,NgFor} from '@angular/common';
-import {FormBuilder, Validators} from '@angular/forms';
+import { AfterViewInit, Component } from '@angular/core';
+import { StepperOrientation } from '@angular/material/stepper';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogCfopComponent } from '../dialog-cfop/dialog-cfop.component';
+import { DialogPvrdcComponent } from './dialog-pvrdc/dialog-pvrdc.component';
 
 @Component({
   selector: 'app-certificatf',
   templateUrl: './certificatf.component.html',
   styleUrls: ['./certificatf.component.scss']
 })
-export class CertificatfComponent {
-  
+export class CertificatfComponent implements AfterViewInit {
+
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
@@ -26,11 +25,25 @@ export class CertificatfComponent {
   });
   stepperOrientation: Observable<StepperOrientation>;
 
-  constructor(private _formBuilder: FormBuilder, breakpointObserver: BreakpointObserver) {
+  constructor(
+    public _formBuilder: FormBuilder,
+    breakpointObserver: BreakpointObserver,
+    private _dialog: MatDialog // Ajout de private ici
+  ) {
     this.stepperOrientation = breakpointObserver
       .observe('(min-width: 900px)')
-      .pipe(map(({matches}) => (matches ? 'horizontal' : 'vertical')));
+      .pipe(map(({ matches }) => (matches ? 'horizontal' : 'vertical')));
   }
+
+  openDialog() { // Correction : Déplacement de la fonction openDialog ici
+    this._dialog.open(DialogPvrdcComponent);
+  }
+
+  ngAfterViewInit(): void {
+    // Correction : Suppression de "throw new Error('Method not implemented.');"
+  }
+
+
 
   typepiece: string[] = [
     'Acte de naissance', "Carte nationale d'identité", "Passeport", "Permis de conduire", "Non renseigné"];
@@ -242,10 +255,15 @@ export class CertificatfComponent {
 'Zambienne',
 'Zimbabweenne',
   ];
-
-
+ 
+ 
+  
 
   
 }
 
+
+function openDialog() {
+  throw new Error('Function not implemented.');
+}
 

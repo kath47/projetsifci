@@ -42,6 +42,8 @@ import { CertificatisoleeComponent } from './transactions/certification/certific
 import { FusioncfComponent } from './transactions/certification/fusioncf/fusioncf.component';
 import { MorcellementcfComponent } from './transactions/certification/morcellementcf/morcellementcf.component';
 import { DialogCfopComponent } from './transactions/certification/dialog-cfop/dialog-cfop.component';
+import { DialogVisaComponent } from './transactions/certification/certificatf/dialog-visa/dialog-visa.component';
+import { DialogPvrdcComponent } from './transactions/certification/certificatf/dialog-pvrdc/dialog-pvrdc.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { DialogCfopComponent } from './transactions/certification/dialog-cfop/di
     CertificatisoleeComponent,
     FusioncfComponent,
     MorcellementcfComponent,
-    DialogCfopComponent
+    DialogCfopComponent,
+    DialogVisaComponent,
+    DialogPvrdcComponent
   ],
   
   

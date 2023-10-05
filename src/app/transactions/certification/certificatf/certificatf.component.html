@@ -176,7 +176,7 @@
                                 <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
                                   <form [formGroup]="secondFormGroup">
                                     <mat-form-field appearance="outline">
-                                      <mat-label>Commissaire Enguêteur :</mat-label>
+                                      <mat-label>Commissaire enquêteur :</mat-label>
                                       <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
                                     </mat-form-field>
                                     <mat-form-field appearance="outline">
@@ -184,7 +184,7 @@
                                       <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
                                     </mat-form-field>
                                     <mat-form-field appearance="outline">
-                                      <mat-label>Date Ouverture Enquête :</mat-label>
+                                      <mat-label>Date Ouverture enquête officielle :</mat-label>
                                       <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
                                     </mat-form-field>
                                     <mat-form-field appearance="outline">
@@ -195,6 +195,9 @@
                                       <mat-label>Date PV de Recenssement :</mat-label>
                                       <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
                                     </mat-form-field>
+                                    <div>
+                                      <button mat-raised-button (click)="openDialog()">Déclaration</button>
+                                    </div>
                                     <div>
                                       <button  class="btn-retour2" mat-button matStepperPrevious>Retour</button>
                                       <button class="btn-suivant2" mat-button matStepperNext>Suivant</button>
