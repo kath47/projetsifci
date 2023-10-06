@@ -14,10 +14,11 @@ import { CertificatfComponent } from './transactions/certification/certificatf/c
 import { CertificatisoleeComponent } from './transactions/certification/certificatisolee/certificatisolee.component';
 import { FusioncfComponent } from './transactions/certification/fusioncf/fusioncf.component';
 import { MorcellementcfComponent } from './transactions/certification/morcellementcf/morcellementcf.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'home', pathMatch: 'full'},
-  {path:'home',component:HomeComponent},
+  {path:'',redirectTo:'dashboard', pathMatch: 'full'},
+  {path:'dashboard',component:DashboardComponent},
   
   {path:'recherche', component:RechercheComponent},
   {path:'transactions', component:TransactionsComponent},

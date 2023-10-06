@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 
+
 import { MatRadioModule} from '@angular/material/radio';
 import { MatDialogModule} from '@angular/material/dialog';
 import { MatDatepickerModule} from '@angular/material/datepicker';
@@ -44,6 +45,7 @@ import { MorcellementcfComponent } from './transactions/certification/morcelleme
 import { DialogCfopComponent } from './transactions/certification/dialog-cfop/dialog-cfop.component';
 import { DialogVisaComponent } from './transactions/certification/certificatf/dialog-visa/dialog-visa.component';
 import { DialogPvrdcComponent } from './transactions/certification/certificatf/dialog-pvrdc/dialog-pvrdc.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,8 @@ import { DialogPvrdcComponent } from './transactions/certification/certificatf/d
     MorcellementcfComponent,
     DialogCfopComponent,
     DialogVisaComponent,
-    DialogPvrdcComponent
+    DialogPvrdcComponent,
+    DashboardComponent
   ],
   
   
@@ -97,6 +100,7 @@ import { DialogPvrdcComponent } from './transactions/certification/certificatf/d
     MatDatepickerModule,
     MatDialogModule,
     MatRadioModule,
+    
 
 
   ],
