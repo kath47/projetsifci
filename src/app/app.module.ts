@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 
-
 import { MatRadioModule} from '@angular/material/radio';
 import { MatDialogModule} from '@angular/material/dialog';
 import { MatDatepickerModule} from '@angular/material/datepicker';
@@ -46,6 +45,8 @@ import { DialogCfopComponent } from './transactions/certification/dialog-cfop/di
 import { DialogVisaComponent } from './transactions/certification/certificatf/dialog-visa/dialog-visa.component';
 import { DialogPvrdcComponent } from './transactions/certification/certificatf/dialog-pvrdc/dialog-pvrdc.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TbCfComponent } from './tb-cf/tb-cf.component';
+import { TbDtvComponent } from './tb-dtv/tb-dtv.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DialogCfopComponent,
     DialogVisaComponent,
     DialogPvrdcComponent,
-    DashboardComponent
+    DashboardComponent,
+    TbCfComponent,
+    TbDtvComponent
   ],
   
   
@@ -100,6 +103,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatDatepickerModule,
     MatDialogModule,
     MatRadioModule,
+  
     
 
 

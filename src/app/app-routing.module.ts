@@ -15,10 +15,14 @@ import { CertificatisoleeComponent } from './transactions/certification/certific
 import { FusioncfComponent } from './transactions/certification/fusioncf/fusioncf.component';
 import { MorcellementcfComponent } from './transactions/certification/morcellementcf/morcellementcf.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TbCfComponent } from './tb-cf/tb-cf.component';
+import { TbDtvComponent } from './tb-dtv/tb-dtv.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'dashboard', pathMatch: 'full'},
   {path:'dashboard',component:DashboardComponent},
+       {path:'tb-cf',component:TbCfComponent},
+       {path:'tb-dtv',component:TbDtvComponent},
   
   {path:'recherche', component:RechercheComponent},
   {path:'transactions', component:TransactionsComponent},
