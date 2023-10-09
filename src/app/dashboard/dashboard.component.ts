@@ -2,13 +2,6 @@ import { Component, ViewChild } from "@angular/core";
 import Chart from 'chart.js/auto';
 
 
-
-
-
-
-
-
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -25,10 +18,10 @@ ngOnInit(){
   new Chart("mychart", {
     type: 'bar',
     data: {
-      labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple'],
+      labels: ['Historique', 'PV Constat', 'Ouv. Pub', 'Clôture Pub', 'approuvés', 'Validés', 'Arrêtés'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Nombre',
+        data: [3255, 1850, 826,703, 730, 1663, 2293],
         borderWidth: 1,
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
@@ -37,7 +30,8 @@ ngOnInit(){
           'rgba(75, 192, 192, 0.2)',
           'rgba(54, 162, 235, 0.2)',
           'rgba(153, 102, 255, 0.2)',
-          'rgba(201, 203, 207, 0.2)'
+          'rgba(201, 203, 207, 0.2)',
+          'rgba(0, 0, 255, 1)'
         ],
         borderColor: [
           'rgb(255, 99, 132)',
@@ -46,7 +40,8 @@ ngOnInit(){
           'rgb(75, 192, 192)',
           'rgb(54, 162, 235)',
           'rgb(153, 102, 255)',
-          'rgb(201, 203, 207)'
+          'rgb(201, 203, 207)',
+          'rgb(128, 168, 27)'
         ],
       }]
     },
@@ -62,10 +57,10 @@ ngOnInit(){
   new Chart("chart2", {
     type: 'pie',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'green'],
+      labels: ['Total CF', 'CF validé', 'CF approuvé', 'Green', 'Purple', 'demande'],
       datasets: [{
         label: 'Certificats',
-        data: [25, 19, 22, 8, 4,10],
+        data: [11589, 5600, 2960, 2100, 1620,12886],
         borderWidth: 2
       }]
     },
@@ -79,7 +74,6 @@ ngOnInit(){
   });
 
 }
-
 
 
 }

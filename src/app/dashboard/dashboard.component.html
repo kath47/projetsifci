@@ -8,14 +8,13 @@
 
 
 
-
 <div class="container-fluid page">
     <div class="page__box p-3 mt-2">TABLEAU DE BORD</div>
     <div class="page__content shadow p-3 position-relative">
         <div class="page__content-data position-absolute">
           
            
-            <main class="main-container">
+           <main class="main-container">
               <div class="main-title">
                 <select name="tb" id="typeTB">
                   <option value="tb1" routerLink="/dashboard">Board principal</option>
@@ -44,7 +43,7 @@
         
                   <div class="card">
                     <div class="card-inner">
-                      <p class="text-green">Contrats Fonciers</p>
+                      <p class="text-green">Contrats </p>
                       <span class="material-symbols-outlined text-green">contract_edit</span>
                     </div>
                     <span class="text-gray font-weight-bold mt-3">663</span>
@@ -65,7 +64,7 @@
                   <div class="charts-card">
                     <p class="chart-title">Diagramme des Territoires Délimités</p>
                     
-                    <div id="bar-chart" style="width: 530px;">
+                    <div class="chart-container">
                       <canvas id="mychart"></canvas>
                     </div>
 
@@ -74,8 +73,8 @@
                   <div class="charts-card">
                     <p class="chart-title">Statistiques des Certificats Fonciers</p>
                     
-                    <div id="chart" style=" height: 300px;">
-                        <canvas id="chart2" style="width: 600px;"></canvas>
+                    <div class="chart-size">
+                        <canvas id="chart2"></canvas>
                       </div>
 
                   </div>
