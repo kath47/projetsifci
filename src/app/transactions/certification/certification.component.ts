@@ -4,6 +4,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from "@angular/material/dialog";
 import { DialogCfopComponent } from './dialog-cfop/dialog-cfop.component';
+import { SelectionModel } from '@angular/cdk/collections';
+
+
 
 @Component({
   selector: 'app-certification',
@@ -11,8 +14,41 @@ import { DialogCfopComponent } from './dialog-cfop/dialog-cfop.component';
   templateUrl: './certification.component.html',
 })
 export class CertificationComponent implements AfterViewInit {
-  displayedColumns: string[] = ['position', 'depart', 'sprefecture'];
+  
+  
+  
+  displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol', 'village'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  selection = new SelectionModel<PeriodicElement>(true, []);
+
+
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+  /** Selects all rows if they are not all selected; otherwise clear selection. */
+  toggleAllRows() {
+    if (this.isAllSelected()) {
+      this.selection.clear();
+      return;
+    }
+
+    this.selection.select(...this.dataSource.data);
+  }
+
+  /** The label for the checkbox on the passed row */
+  checkboxLabel(row?: PeriodicElement): string {
+    if (!row) {
+      return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
+    }
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+  }
+
+
+
+
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -24,37 +60,30 @@ export class CertificationComponent implements AfterViewInit {
 
   openDialog() {
     this.dialog.open(DialogCfopComponent, {
-      width: '400px', // Set the width as per your requirement
+      width: '', // Set the width as per your requirement
       // Add any other configuration options here
     });
   }
 }
 
+
 export interface PeriodicElement {
+  name: string;
   position: number;
-  depart: string;
-  sprefecture: string;
+  weight: number;
+  symbol: string;
+  village: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  // Your data
-  {position: 1, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 3, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 4, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 5, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 6, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 7, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 8, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 9, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 10, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 11, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 12, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 13, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 14, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 15, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 16, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 17, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 18, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 19, depart:'Toumodi', sprefecture:'Toumodi'},
-  {position: 20, depart:'Toumodi', sprefecture:'Toumodi'},
+  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', village: 'H'} ,
+  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', village: 'H'},
+  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li', village: 'H'},
+  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be', village: 'H'},
+  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B', village: 'H'},
+  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C', village: 'H'},
+  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N', village: 'H'},
+  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O', village: 'H'},
+  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F', village: 'H'},
+  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne', village: 'H'},
 ];

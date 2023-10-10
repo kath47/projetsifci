@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatRadioModule} from '@angular/material/radio';
 import { MatDialogModule} from '@angular/material/dialog';
 import { MatDatepickerModule} from '@angular/material/datepicker';
@@ -103,7 +103,7 @@ import { TbDtvComponent } from './tb-dtv/tb-dtv.component';
     MatDatepickerModule,
     MatDialogModule,
     MatRadioModule,
-  
+    MatCheckboxModule,
     
 
 

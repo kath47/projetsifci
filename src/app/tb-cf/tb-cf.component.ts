@@ -15,7 +15,7 @@ export class TbCfComponent {
   ngOnInit(){
   
     new Chart("mychart", {
-      type: 'bar',
+      type: 'line',
       data: {
         labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple'],
         datasets: [{
