@@ -1,126 +1,99 @@
- <div mat-dialog-title class="title">PARAMETRE DE LA DEMANDE</div> 
-<!--
-<form action="">
+<div mat-dialog-title class="title">PARAMETRE DE LA DEMANDE</div> 
 
-<div mat-dialog-content class="container"> 
-<div class="row">
-   <mat-form-field appearance="outline">
-    <mat-label>REGION</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let state of region" [value]="state">{{state}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  
-
-  <mat-form-field appearance="outline">
-    <mat-label>DEPARTEMENT</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let state of departement" [value]="state">{{state}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-
- 
-  <mat-form-field appearance="outline">
-    <mat-label>SOUS-PREFECTURE</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let state of sprefecture" [value]="state">{{state}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
-
-<div class="row">
-  <mat-form-field appearance="outline">
-    <mat-label>Village</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let state of region" [value]="state">{{state}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="outline">
-    <mat-label>Type personne</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let state of typperson" [value]="state">{{state}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-
- 
-  <mat-form-field appearance="outline">
-    <mat-label>Rôle du demandeur</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let state of rol" [value]="state">{{state}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  
-</div>
-
-            <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>Numéro du dossier</mat-label>
-                <input type="number" matInput placeholder=" Ex: 000785" formControlName="firstCtrl" required>
-              </mat-form-field>
-
-              <mat-form-field appearance="outline">
-                <mat-label>date demande</mat-label>
-                <input type="date" matInput placeholder=" Ex: 12/05/2023" formControlName="firstCtrl" required>
-              </mat-form-field>
-
-              <mat-form-field appearance="outline">
-                <mat-label>Type de personne</mat-label>
-                <input type="number" matInput placeholder=" Ex: 000785" formControlName="firstCtrl" required>
-              </mat-form-field>
-              </div>
-
-              <div class="row">
-              <mat-form-field appearance="outline">
-                <mat-label>Rôle du demandeur</mat-label>
-                <input type="number" matInput placeholder=" Ex: 000785" formControlName="firstCtrl" required>
-              </mat-form-field>
-
-              <mat-form-field appearance="outline">
-                <mat-label>Nom du groupement</mat-label>
-                <input  matInput placeholder=" Ex: 12/05/2023" formControlName="firstCtrl" required>
-              </mat-form-field>
-
-              <mat-form-field appearance="outline">
-                <mat-label>Adresse</mat-label>
-                <input type="number" matInput placeholder=" Ex: 000785" formControlName="firstCtrl" required>
-              </mat-form-field>
-            </div> 
-           </div> -->  
-
- 
-   <div class="container">
-    <div class="row">
-      <div class="cl-xl-10">
-        <form action="" class="needs-validation" novalidate autocomplete="off">
-           <div class="row justify-content-center">
-            <div class="form-group col-md-6">
-              <label for="region">Département</label>
-              <select id="region" class="form-select form-select-sm">
-                <option *ngFor="let region of region" value="">{{region}}</option>
-              </select>
-            </div>
-              <div class="form-group col-md-6">
-                <label for="">Sous-préfecture</label>
-                <select class="form-select form-select-sm" data-live-search="true" default="FR" id="region">
-                  <option *ngFor="let region of region" value="">{{region}}</option>
-                </select>
-                 <label for="">Nom du groupement</label>
-                 <input type="text" name="" id="" class="form-control form-control-sm">
-              </div>
-           </div>
-        </form>
-      </div>
+<section class="container  bg-dark text-light py-3 ">
+  <div class="card py-3">
+    <div class="card-header"> Localisation de la parcelle</div>
+  <form class="row g-3 mx-3 py-3">
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Département</label>
+      <select id="inputState" class="form-select form-select-sm">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
     </div>
-   </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Sous-préfecture</label>
+      <select id="inputState" class="form-select form-select-sm">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Village</label>
+      <select id="inputState" class="form-select form-select-sm">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+  </form>
+</div>
+</section>
 
+<section class="container bg-secondary text-light py-3 ">
+  <div class="card">
+    <div class="card-header">Infos demande | Type personnes | Opérateur Foncier</div>
+  
+  <form class="row g-3 mx-3 py-3">
+    <div class="col-md-4">
+      <label for="inputnumber" class="form-label">Numéro demande</label>
+      <input type="number" class="form-control" id="inputnumber" required>
+    </div>
 
+    <div class="col-md-4">
+      <label for="inputdate" class="form-label">Date</label>
+      <input type="date" class="form-control" id="inputdate">
+    </div>
 
-<div class="btn" matDialogActions>
-    <button mat-raised-button>Annuler</button>
-    <button mat-raised-button routerLink="/certificatf" class="btn-color" >Confirmer</button>
-</div> 
+    <div class="col-md-4">
+      <label for="inputcreatdate" class="form-label">Date Création</label>
+      <input type="date" class="form-control" id="inputcreatdate" placeholder="">
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputtyp" class="form-label">Type demandeur</label>
+      <select id="inputtyp" class="form-select form-select-sm">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputrol" class="form-label">Rôle demandeur</label>
+      <select id="inputrol" class="form-select form-select-sm">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputgroup" class="form-label">Nom du groupement</label>
+      <input type="text" class="form-control" id="inputgroup" placeholder="">
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputAdress" class="form-label">Adresse</label>
+      <input type="text" class="form-control" id="inputAdress">
+    </div>
+    
+    <div class="col-md-4">
+      <label for="inputemail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputemail">
+    </div>
+    
+      <div class="col-md-4">
+        <label for="inputtel" class="form-label">Téléphone</label>
+        <input type="tel" class="form-control" id="inputtel">
+      </div>
+
+    <div class="card-body">
+    <div class="col-md-12">
+      <button type="btn" class="btn btn-secondary">Retour</button> <div class="space"></div>
+      <button type="submit" class="btn btn-secondary" routerLink="../certificatf" routerLinkActive="list-item-active">Valider</button>
+    </div>
+  </div>
+  </form>
+</div>
+</section>
+
+ 
                                                                                                        

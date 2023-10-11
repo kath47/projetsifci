@@ -17,5 +17,9 @@
   table th {
       background-color: #30ae67;
       color: white;
-    
+  }
+
+  ::ng-deep .mat-checkbox-checked.mat-primary .mat-checkbox-background, 
+  .mat-checkbox-indeterminate.mat-primary .mat-checkbox-background{
+    background: rgb(248, 244, 39)!important;
   }

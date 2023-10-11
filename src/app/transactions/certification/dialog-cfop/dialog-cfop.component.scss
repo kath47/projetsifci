@@ -1,4 +1,4 @@
-.container{
+/*.container{
     padding-top: 10px;
 }
 
@@ -26,4 +26,24 @@
     button{
         flex: 1;
     }
+}*/
+
+
+.form-control,.form-select{
+    height: 26px;
+    font-size: 12px;
+}
+
+.form-label{
+    font-size: 12px;
+}
+
+.space{
+    display: inline-block;
+    width: 20px;
+}
+
+button{
+    width: 30%;
+    height: 32px;
 }
