@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class DialogCfopComponent {
 
-  typperson:string[] = [
+  typdemandeur:string[] = [
     'Physique',
     'Famille',
     'Morale privée',
@@ -20,7 +20,7 @@ export class DialogCfopComponent {
     'Collectivité territoriale',
   ];
 
-  rol:string[] = [
+  roledemandeur:string[] = [
     'Demandeur',
     'Gestionnaire',
   ];

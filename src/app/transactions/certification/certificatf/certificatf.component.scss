@@ -127,3 +127,32 @@ section{
   text-align: center;
   transition: color .2s ease-in-out;
  }
+
+ #input-nni{
+     margin-bottom: 15px;
+ }
+
+ #btn-nni{
+  width: 30px;
+  height: 38px;
+  float:left;
+  margin-top: 27px;
+  display:inline;
+ }
+
+ #card-nni{
+  border: none;
+ }
+
+
+
+ ::placeholder {
+  color: rgb(164, 163, 163);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: rgb(164, 163, 163);
+
+}
+ 

@@ -1,37 +1,37 @@
 <div mat-dialog-title class="title">PARAMETRE DE LA DEMANDE</div> 
 
-<section class="container  bg-dark text-light py-3 ">
-  <div class="card py-3">
+<section class="container py-3 ">
+  <div class="card">
     <div class="card-header"> Localisation de la parcelle</div>
   <form class="row g-3 mx-3 py-3">
     <div class="col-md-4">
       <label for="inputState" class="form-label">Département</label>
       <select id="inputState" class="form-select form-select-sm">
         <option selected>Choose...</option>
-        <option>...</option>
+        <option *ngFor="let departement of departement" value="">{{departement}}</option>
       </select>
     </div>
     <div class="col-md-4">
       <label for="inputState" class="form-label">Sous-préfecture</label>
       <select id="inputState" class="form-select form-select-sm">
         <option selected>Choose...</option>
-        <option>...</option>
+        <option *ngFor="let sprefecture of sprefecture" value="">{{sprefecture}}</option>
       </select>
     </div>
     <div class="col-md-4">
       <label for="inputState" class="form-label">Village</label>
       <select id="inputState" class="form-select form-select-sm">
         <option selected>Choose...</option>
-        <option>...</option>
+        <option *ngFor="let region of region" value="">{{region}}</option>
       </select>
     </div>
   </form>
 </div>
 </section>
 
-<section class="container bg-secondary text-light py-3 ">
+<section class="container py-3 ">
   <div class="card">
-    <div class="card-header">Infos demande | Type personnes | Opérateur Foncier</div>
+    <div class="card-header">Information sur la demande  &nbsp;|&nbsp;  Type de personne  &nbsp;|&nbsp;  Opérateur Foncier</div>
   
   <form class="row g-3 mx-3 py-3">
     <div class="col-md-4">
@@ -53,7 +53,7 @@
       <label for="inputtyp" class="form-label">Type demandeur</label>
       <select id="inputtyp" class="form-select form-select-sm">
         <option selected>Choose...</option>
-        <option>...</option>
+        <option *ngFor="let typdemandeur of typdemandeur" value="">{{typdemandeur}}</option>
       </select>
     </div>
 
@@ -61,7 +61,7 @@
       <label for="inputrol" class="form-label">Rôle demandeur</label>
       <select id="inputrol" class="form-select form-select-sm">
         <option selected>Choose...</option>
-        <option>...</option>
+        <option *ngFor="let roledemandeur of roledemandeur" value="">{{roledemandeur}}</option>
       </select>
     </div>
 
@@ -82,13 +82,15 @@
     
       <div class="col-md-4">
         <label for="inputtel" class="form-label">Téléphone</label>
-        <input type="tel" class="form-control" id="inputtel">
+        <input type="tel" class="form-control" id="inputtel" placeholder="Ex: +2250707000000">
       </div>
 
-    <div class="card-body">
-    <div class="col-md-12">
-      <button type="btn" class="btn btn-secondary">Retour</button> <div class="space"></div>
-      <button type="submit" class="btn btn-secondary" routerLink="../certificatf" routerLinkActive="list-item-active">Valider</button>
+    <div class="row">
+    <div class="col-md-6 mt-4">
+      <button type="btn" id="retour" class="btn btn-secondary">Retour</button> <div class="space"></div>
+    </div>
+    <div class="col-md-6 mt-4">
+      <button type="submit" id="submit" class="btn btn-secondary" routerLink="../certificatf">Valider</button>
     </div>
   </div>
   </form>

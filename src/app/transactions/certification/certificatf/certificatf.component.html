@@ -65,15 +65,77 @@
 
             <div class="droite">
                     <mat-card class="card-droite">
-
                         <mat-card-content>
-
                               <mat-stepper
                                 class="example-stepper"
                                 [orientation]="(stepperOrientation | async)!">
                                 <mat-step [stepControl]="firstFormGroup" label="Demande">
 
-                                  <form [formGroup]="firstFormGroup">
+                                  <div class="card" id="card-nni">
+                                    <div class="row g-2  mx-2" id="input-nni">
+                                    <div class="col-md-6 ">
+                                      <label for="inputnni" class="form-label"></label>
+                                      <input type="text" class="form-control" id="inputnni" placeholder="Entrez le n° NNI ou n° CMU">
+                                    </div>
+
+                                    <div class="col-md-6 " id="btn-nni">
+                                      <button class="btn btn-success">Valider</button>
+                                    </div>
+                                  </div>
+                                  </div>
+
+
+                                  <div class="card">
+                                    <form class="row g-3 mx-2 py-3">
+
+                                      <div class="col-md-4">
+                                        <label for="inputnom" class="form-label">Nom</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputnom">
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">Prénom</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">Date de naissance</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">Lieu naissance</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">Nom et prénom du père</label>
+                                        <input type="text" class="form-control form-control-sm " id="inputAdress">
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">Nom et prénom de la mère</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputrol" class="form-label">Nationalité</label>
+                                        <select id="inputrol" class="form-select form-select-sm">
+                                          <option selected>Choose...</option>
+                                          <option *ngFor="let Nationalite of Nationalite" value="">{{Nationalite}}</option>
+                                        </select>
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputrol" class="form-label">Profession</label>
+                                        <select id="inputrol" class="form-select form-select-sm">
+                                          <option selected>Choose...</option>
+                                          <option *ngFor="let profession of profession" value="">{{profession}}</option>
+                                        </select>
+                                      </div>
+
+                                    </form>
+                                  </div>
+
+                                  <!--<form [formGroup]="firstFormGroup">
                                     <mat-form-field appearance="outline">
                                       <mat-label>Nom</mat-label>
                                       <input matInput placeholder="Ex: Konan-Kan" formControlName="firstCtrl" required>
@@ -169,7 +231,7 @@
                                     <div>
                                       <button class="btn-suivant" mat-button matStepperNext>Suivant</button>
                                     </div>
-                                  </form>
+                                  </form>-->
 
                           <!--    Etape 2  du procecuss       -->
                                 </mat-step>
