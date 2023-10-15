@@ -46,8 +46,16 @@ export class CertificatfComponent implements AfterViewInit {
 
 
   typepiece: string[] = [
-    'Acte de naissance', "Carte nationale d'identité", "Passeport", "Permis de conduire", "Non renseigné"];
+   'Acte de naissance',
+   "Carte nationale d'identité",
+   "Carte CMU",
+   "Passeport", 
+   "Permis de conduire", 
+   "Non renseigné"];
+
     typeoccupation:string []= ["Propriété Privée","Coutumier","Propriété d'Etat"] ;
+    
+    limite:string []= ["Propriété Privée","Coutumier","Propriété d'Etat"] ;
   
 
   profession: string[] = [

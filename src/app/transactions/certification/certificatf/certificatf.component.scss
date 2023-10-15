@@ -15,9 +15,16 @@ section{
  .droite {
     width: 100% ;
     height: 100% !important;
-    margin-left: 20px;
+    margin-left: 15px;
   }
 
+  .card-droite{
+    margin-left: -5px;
+  }
+
+  mat-step > .label{
+    font-size: 12px;
+  }
 
   mat-card-header{
     background: rgb(228, 227, 227);
@@ -42,6 +49,7 @@ section{
 
    mat-stepper{
     width: 100% !important;
+    
    }
 
    mat-form-field,.matInput{
@@ -130,11 +138,23 @@ section{
 
  #input-nni{
      margin-bottom: 15px;
+     height: 60px;
+     
+ }
+
+ #btncmu{
+  background-color: #30ae67;
+  text-align: center;
+  align-content: center;
+  color: white;
+  height: 30px;
+  width: 80px;
+  display: inline-flex;
  }
 
  #btn-nni{
   width: 30px;
-  height: 38px;
+  height: 15px;
   float:left;
   margin-top: 27px;
   display:inline;
@@ -144,7 +164,13 @@ section{
   border: none;
  }
 
+::ng-deep #btnS1{
+  margin-left: 25px;
+}
 
+#but-md-2{
+  margin-bottom: 26px;
+}
 
  ::placeholder {
   color: rgb(164, 163, 163);
@@ -156,3 +182,8 @@ section{
 
 }
  
+
+.form-control, .form-select{
+  height: 26px;
+  font-size: 12px;
+}

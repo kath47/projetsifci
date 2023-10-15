@@ -61,7 +61,7 @@ export class CertificationComponent implements AfterViewInit {
   openDialog() {
     this.dialog.open(DialogCfopComponent, {
       width: '600px', // Set the width as per your requirement
-      height:'580px',// Add any other configuration options here
+      height:'585px',// Add any other configuration options here
     });
   }
 }

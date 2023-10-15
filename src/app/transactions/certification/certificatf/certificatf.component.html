@@ -79,11 +79,10 @@
                                     </div>
 
                                     <div class="col-md-6 " id="btn-nni">
-                                      <button class="btn btn-success">Valider</button>
+                                      <button class="btn" id="btncmu">Valider</button>
                                     </div>
                                   </div>
                                   </div>
-
 
                                   <div class="card">
                                     <form class="row g-3 mx-2 py-3">
@@ -99,7 +98,7 @@
                                       </div>
                                       <div class="col-md-4">
                                         <label for="inputAdress" class="form-label">Date de naissance</label>
-                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                        <input type="date" class="form-control form-control-sm" id="inputAdress">
                                       </div>
                                       <div class="col-md-4">
                                         <label for="inputAdress" class="form-label">Lieu naissance</label>
@@ -132,6 +131,38 @@
                                         </select>
                                       </div>
 
+                                      <div class="col-md-4">
+                                        <label for="inputrol" class="form-label">Type Pièce d'identité</label>
+                                        <select id="inputrol" class="form-select form-select-sm">
+                                          <option selected>Choose...</option>
+                                          <option *ngFor="let typepiece of typepiece" value="">{{typepiece}}</option>
+                                        </select>
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">N° Pièce identité</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">Résiddence habituelle</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">Téléphone</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+
+                                      <div class="col-md-4">
+                                        <label for="inputAdress" class="form-label">Agissant pour le compte</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+
+                                      <div class="col-md-7">
+                                        <button class="btn-suivant"  mat-button matStepperNext>Suivant</button>
+                                      </div>
+
                                     </form>
                                   </div>
 
@@ -139,27 +170,7 @@
                           <!--    Etape 2  du procecuss       -->
                                 </mat-step>
                                 <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-                                  <form [formGroup]="secondFormGroup">
-                                    <mat-form-field appearance="outline">
-                                      <mat-label>Commissaire enquêteur :</mat-label>
-                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-                                    </mat-form-field>
-                                    <mat-form-field appearance="outline">
-                                      <mat-label>Superficie:</mat-label>
-                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-                                    </mat-form-field>
-                                    <mat-form-field appearance="outline">
-                                      <mat-label>Date Ouverture enquête officielle :</mat-label>
-                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-                                    </mat-form-field>
-                                    <mat-form-field appearance="outline">
-                                      <mat-label>N° de parcelle:</mat-label>
-                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-                                    </mat-form-field>
-                                    <mat-form-field appearance="outline">
-                                      <mat-label>Date PV de Recenssement :</mat-label>
-                                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-                                    </mat-form-field>
+                                  <form class="row g-3 mx-2 py-3">
                                     <div>
                                       <button mat-raised-button (click)="openDialog()">Déclaration</button>
                                     </div>
