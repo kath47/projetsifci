@@ -56,6 +56,8 @@ export class CertificatfComponent implements AfterViewInit {
     typeoccupation:string []= ["Propriété Privée","Coutumier","Propriété d'Etat"] ;
     
     limite:string []= ["Propriété Privée","Coutumier","Propriété d'Etat"] ;
+
+    cenq:string []= ["Jean BEDEL","Assi Pepin","Kouadio Arsène","Koné Binko"] ;
   
 
   profession: string[] = [

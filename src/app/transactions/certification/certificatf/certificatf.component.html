@@ -69,17 +69,19 @@
                               <mat-stepper
                                 class="example-stepper"
                                 [orientation]="(stepperOrientation | async)!">
-                                <mat-step [stepControl]="firstFormGroup" label="Demande">
+                                <mat-step [stepControl]="firstFormGroup">
 
                                   <div class="card" id="card-nni">
-                                    <div class="row g-2  mx-2" id="input-nni">
-                                    <div class="col-md-6 ">
+                                    <div class="row g-2  mx-4 my-3">
+                                    <div class="col-md-4 " style="height: 42px; margin-left: -25px;">
                                       <label for="inputnni" class="form-label"></label>
                                       <input type="text" class="form-control" id="inputnni" placeholder="Entrez le n° NNI ou n° CMU">
                                     </div>
 
                                     <div class="col-md-6 " id="btn-nni">
-                                      <button class="btn" id="btncmu">Valider</button>
+                                      <button class="btn " id="btncmu"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-check" viewBox="0 0 48 48">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                      </svg></button>
                                     </div>
                                   </div>
                                   </div>
@@ -159,8 +161,12 @@
                                         <input type="text" class="form-control form-control-sm" id="inputAdress">
                                       </div>
 
-                                      <div class="col-md-7">
-                                        <button class="btn-suivant"  mat-button matStepperNext>Suivant</button>
+                                      <div class="col-md-5 ">
+                                        <input type="file" class="btn my-4 mx-1">
+                                      </div>
+
+                                      <div class="col-md-2 mx-4">
+                                        <button class="btn-suivant mx-5"  mat-button matStepperNext>Suivant</button>
                                       </div>
 
                                     </form>
@@ -169,18 +175,64 @@
 
                           <!--    Etape 2  du procecuss       -->
                                 </mat-step>
-                                <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+                                <mat-step [stepControl]="secondFormGroup">
+                                  <div class="card">
                                   <form class="row g-3 mx-2 py-3">
-                                    <div>
-                                      <button mat-raised-button (click)="openDialog()">Déclaration</button>
+                                    
+                                    <div class="col-md-2">
+                                      <label for="inputrdc" class="form-label">N° du Pv</label>
+                                      <input type="number" class="form-control form-control-sm" id="inputrdc">
                                     </div>
-                                    <div>
-                                      <button  class="btn-retour2" mat-button matStepperPrevious>Retour</button>
-                                      <button class="btn-suivant2" mat-button matStepperNext>Suivant</button>
+
+                                    <div class="col-md-3">
+                                      <label for="inputrdc" class="form-label">Date</label>
+                                      <input type="date" class="form-control form-control-sm" id="inputrdc">
+                                    </div>
+
+                                    <div class="col-md-3">
+                                      <label for="inputrol" class="form-label">Commissaire enquêteur</label>
+                                      <select id="inputrol" class="form-select form-select-sm">
+                                        <option selected>Choose...</option>
+                                        <option *ngFor="let cenq of cenq" value="">{{cenq}}</option>
+                                      </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                      <label for="inputrdc" class="form-label">Superficie (en hectare)</label>
+                                      <input type="text" class="form-control form-control-sm" id="inputrdc">
                                     </div>
                                   </form>
+                                </div>
+                                    
+                                <div class="card my-3">
+                                  <form class="row">
+
+                                  </form>
+                                </div>
+                                <div>
+                                  <button mat-raised-button (click)="openDialog()">Déclaration</button>
+                                </div>
+                                <div>
+                                  <button  class="btn-retour2" mat-button matStepperPrevious>Retour</button>
+                                  <button class="btn-suivant2" mat-button matStepperNext>Suivant</button>
+                                </div>
                                 </mat-step>
-                                <mat-step [stepControl]="thirdFormGroup" label="Fill out your phone number">
+
+                               <!-- Etape 3 du processus-->
+                               <mat-step [stepControl]="thirdFormGroup" >
+                                <form class="row g-3 mx-2 py-3">
+                                  <div>
+                                    <button mat-raised-button (click)="openDialog()">Déclaration</button>
+                                  </div>
+                                  <div>
+                                    <button  class="btn-retour2" mat-button matStepperPrevious>Retour</button>
+                                    <button class="btn-suivant2" mat-button matStepperNext>Suivant</button>
+                                  </div>
+                                </form>
+                              </mat-step>
+                               
+                              <!-- Etape 4 du processus-->
+                                <mat-step [stepControl]="thirdFormGroup">
                                   <form [formGroup]="thirdFormGroup">
                                     <mat-form-field>
                                       <mat-label>Phone number</mat-label>

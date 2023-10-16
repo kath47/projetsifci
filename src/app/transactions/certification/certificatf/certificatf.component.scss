@@ -147,9 +147,12 @@ section{
   text-align: center;
   align-content: center;
   color: white;
-  height: 30px;
-  width: 80px;
-  display: inline-flex;
+  height: 28px;
+  width: 40px;
+ }
+
+ #btncmu:hover{
+  background-color: #27e17b;
  }
 
  #btn-nni{
@@ -162,6 +165,7 @@ section{
 
  #card-nni{
   border: none;
+  margin-top: -40px;
  }
 
 ::ng-deep #btnS1{
@@ -184,6 +188,6 @@ section{
  
 
 .form-control, .form-select{
-  height: 26px;
+  height: 28px;
   font-size: 12px;
 }
