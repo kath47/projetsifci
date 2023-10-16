@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogPvrdcComponent } from './dialog-pvrdc/dialog-pvrdc.component';
+import { DialogVisaComponent } from './dialog-visa/dialog-visa.component';
 
 @Component({
   selector: 'app-certificatf',
@@ -35,8 +36,17 @@ export class CertificatfComponent implements AfterViewInit {
       .pipe(map(({ matches }) => (matches ? 'horizontal' : 'vertical')));
   }
 
-  openDialog() { // Correction : Déplacement de la fonction openDialog ici
-    this._dialog.open(DialogPvrdcComponent);
+  openDialog1() { // Correction : Déplacement de la fonction openDialog ici
+    this._dialog.open(DialogPvrdcComponent, {
+      width: '400px', 
+      height:'400px',
+    });
+  }
+  openDialog2() { // Correction : Déplacement de la fonction openDialog ici
+    this._dialog.open(DialogVisaComponent,  {
+      width: '400px', 
+      height:'300px',
+    });
   }
 
   ngAfterViewInit(): void {

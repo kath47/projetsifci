@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class DialogVisaComponent {
 
+  qualite:string[] = [
+    'Président CVGFR',
+    'Sécrétaire',
+    'Membre',
+    'Sachant',
+    'Frère',
+    'Soeur',
+    'Démandeur',
+  ];
 }

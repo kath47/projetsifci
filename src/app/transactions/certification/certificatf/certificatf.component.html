@@ -203,15 +203,154 @@
                                     </div>
                                   </form>
                                 </div>
-                                    
-                                <div class="card my-3">
-                                  <form class="row">
+                                   <br> 
+                                  <div class="card" id="rdc-visa">
+                                    <div class="card-header">
+                                      <div class="row ">
+                                        <div class="col-md-6">
+                                      <button type="button" class="btn btn-outline-secondary btn-sm" (click)="openDialog2()"> &nbsp;
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                                            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                            <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+                                          </svg> Ajouter un membre de l'équipe 
+                                    </button>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm mx-3" (click)="openDialog1()"> &nbsp;
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                                          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                          <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+                                        </svg> Déclaration des personnes auditionnées 
+                                  </button>
+                                </div>
+                              </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="overflow-scroll col-md-4">
+                                        <table class="table table-hover">
+                                          <thead class="thead-dark">
+                                            <tr>
+                                              <th scope="col">N°</th>
+                                              <th scope="col">Membre </th>
+                                              <th scope="col">Fonction/Qualité</th>
+                                              <th scope="col">Signature</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th scope="row">1</th>
+                                              <td>Mark</td>
+                                              <td>Otto</td>
+                                              <td>Otto</td>
+                                            
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">2</th>
+                                              <td>Jacob</td>
+                                              <td>Jacob</td>
+                                              <td>Jacob</td>
+                                             
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">3</th>
+                                              <td>@twitter</td>
+                                              <td>@twitter</td>
+                                              <td>@twitter</td>
+                                            
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">4</th>
+                                              <td>Jacob</td>
+                                              <td>Jacob</td>
+                                              <td>Jacob</td>
+                                              
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">5</th>
+                                              <td>Jacob</td>
+                                              <td>Jacob</td>
+                                              <td>Jacob</td>
+                                             
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">6</th>
+                                              <td>Jacob</td>
+                                              <td>Jacob</td>
+                                              <td>Jacob</td>
+                                             
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
 
-                                  </form>
+                                    <div class="overflow-scroll col-md-6">
+                                      <table class="table table-hover">
+                                        <thead class="thead-dark">
+                                          <tr>
+                                            <th scope="col">N°</th>
+                                            <th scope="col">Qualité </th>
+                                            <th scope="col">Nom & prénom</th>
+                                            <th scope="col">Nationalité</th>
+                                            <th scope="col">N° pièce</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Président</td>
+                                            <td>Otto Frédéric</td>
+                                            <td>Ivoirienne</td>
+                                            <td>CI006121233</td>
+                                          
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Sécrétaire</td>
+                                            <td>Jacob Kouassi</td>
+                                            <td>Ivoirienne</td>
+                                            <td>CI003178990</td>
+                                           
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Membre</td>
+                                            <td>Koné Binta</td>
+                                            <td>Ivoirienne</td>
+                                            <td>CI009154231</td>
+                                          
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">4</th>
+                                            <td>Cédant</td>
+                                            <td>François Achi</td>
+                                            <td>Ivoirienne</td>
+                                            <td>CI001033290</td>
+                                            
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">5</th>
+                                            <td>frère</td>
+                                            <td>Jacques Akon</td>
+                                            <td>Ivoirienne</td>
+                                            <td>CI002170239</td>
+                                           
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">6</th>
+                                            <td>demandeur</td>
+                                            <td>Sebastien Sékongo</td>
+                                            <td>Ivoirienne</td>
+                                            <td>CI0011721234</td>
+                                           
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                  </div>
+                                  </div>
                                 </div>
-                                <div>
-                                  <button mat-raised-button (click)="openDialog()">Déclaration</button>
-                                </div>
+                                  <br>
+                                
+                              
                                 <div>
                                   <button  class="btn-retour2" mat-button matStepperPrevious>Retour</button>
                                   <button class="btn-suivant2" mat-button matStepperNext>Suivant</button>
@@ -220,9 +359,10 @@
 
                                <!-- Etape 3 du processus-->
                                <mat-step [stepControl]="thirdFormGroup" >
-                                <form class="row g-3 mx-2 py-3">
+                                <form action="">
+
                                   <div>
-                                    <button mat-raised-button (click)="openDialog()">Déclaration</button>
+                                    <button mat-raised-button (click)="openDialog2()">Déclaration</button>
                                   </div>
                                   <div>
                                     <button  class="btn-retour2" mat-button matStepperPrevious>Retour</button>
