@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad/public-api';
+
 
 @Component({
   selector: 'app-dialog-visa',
@@ -9,11 +11,13 @@ export class DialogVisaComponent {
 
   qualite:string[] = [
     'Président CVGFR',
-    'Sécrétaire',
-    'Membre',
-    'Sachant',
-    'Frère',
-    'Soeur',
-    'Démandeur',
+    'Sécrétaire CVGFR',
+    'Membre CVGFR',
+    'Sachant du village',
+    'Parents du demandeur',
+    'Le cedant',
+    'Demandeur',
   ];
+
+ 
 }

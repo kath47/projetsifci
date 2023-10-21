@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatRadioModule} from '@angular/material/radio';
 import { MatDialogModule} from '@angular/material/dialog';
@@ -104,6 +105,7 @@ import { TbDtvComponent } from './tb-dtv/tb-dtv.component';
     MatDialogModule,
     MatRadioModule,
     MatCheckboxModule,
+    AngularSignaturePadModule
     
 
 

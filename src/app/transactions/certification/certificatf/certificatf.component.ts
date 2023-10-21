@@ -29,28 +29,28 @@ export class CertificatfComponent implements AfterViewInit {
   constructor(
     public _formBuilder: FormBuilder,
     breakpointObserver: BreakpointObserver,
-    private _dialog: MatDialog // Ajout de private ici
+    private _dialog: MatDialog 
   ) {
     this.stepperOrientation = breakpointObserver
       .observe('(min-width: 900px)')
       .pipe(map(({ matches }) => (matches ? 'horizontal' : 'vertical')));
   }
 
-  openDialog1() { // Correction : Déplacement de la fonction openDialog ici
+  openDialog1() { 
     this._dialog.open(DialogPvrdcComponent, {
-      width: '400px', 
-      height:'400px',
+      width: '600px', 
+      height:'550px',
     });
   }
-  openDialog2() { // Correction : Déplacement de la fonction openDialog ici
+  openDialog2() { 
     this._dialog.open(DialogVisaComponent,  {
       width: '400px', 
-      height:'300px',
+      height:'420px',
     });
   }
 
   ngAfterViewInit(): void {
-    // Correction : Suppression de "throw new Error('Method not implemented.');"
+   
   }
 
 

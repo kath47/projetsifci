@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@almothafar/angular-signature-pad": "^5.0.1",
     "@angular/animations": "^16.2.0",
     "@angular/cdk": "^16.2.5",
     "@angular/common": "^16.2.0",
@@ -26,6 +27,7 @@
     "bootstrap-icons": "^1.11.1",
     "chart.js": "^4.4.0",
     "ng-apexcharts": "^1.8.0",
+    "recordrtc": "^5.6.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -36,6 +38,7 @@
     "@angular/compiler-cli": "^16.2.0",
     "@types/chart.js": "^2.9.38",
     "@types/jasmine": "~4.3.0",
+    "@types/recordrtc": "^5.6.12",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

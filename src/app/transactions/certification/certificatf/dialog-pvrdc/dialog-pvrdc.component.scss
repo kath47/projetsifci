@@ -1,0 +1,25 @@
+
+
+.input-container {
+    display: flex;
+    align-items: center;
+    max-width: 50px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.mic-icon {
+    font-size: 18px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.audio-placeholder, label{
+    font-size: 12px;
+}
