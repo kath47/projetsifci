@@ -1,83 +1,179 @@
-.logo{
+
+.logo {
     text-align: center;
     padding: 1rem 1rem;
-    img{
-        width: 20px;
+    img {
+        width: 1.25rem;
     }
 }
 
-.mat-icon{
+.mat-icon {
     vertical-align: center;
     margin-right: 1rem;
     color: white;
 }
-.list,mat-nav-list{
-    color:#fff !important ;
-}
 
-::ng-deep .mat-list-item{
+.list,
+mat-nav-list {
     color: #fff !important;
 }
 
-.mat-divider{
-    border-top-width: 2px;
+::ng-deep .mat-list-item {
+    color: #fff !important;
+}
+
+.mat-divider {
+    border-top-width: 0.125rem;
     border-color: white;
 }
 
-.mat-list-item{
+.mat-list-item {
     color: #acb7c5 !important;
     font-size: 0.8rem;
-    height: 44px !important;
+    height: 2.75rem !important;
     margin-bottom: 4px;
-    ::ng-deep{
-        .mat-list-item-content{
-            border-radius: 5px;
-            margin: 0 8px;
-            &:hover{
-            background-color: #f4f7fe !important;
+    ::ng-deep {
+        .mat-list-item-content {
+            border-radius: 0.313rem;
+            margin: 0 0.5rem;
+            &:hover {
+                background-color: #f4f7fe !important;
             }
         }
     }
 }
 
-.list-item-active{
+.list-item-active {
     color: #f4f7fe !important;
-    ::ng-deep{
-        .mat-list-item-content{
+    ::ng-deep {
+        .mat-list-item-content {
             background-color: #45f5c0 !important;
-            &:hover{
+            &:hover {
                 background-color: #a9f9bf;
             }
         }
     }
 }
 
-.mat-subheader{
+.mat-subheader {
     color: #818cf8;
     font-size: 0.8rem;
     font-weight: 100;
-    letter-spacing: 1px;
-    margin-left: 5px;
+    letter-spacing: 0.063rem;
+    margin-left: 0.313rem;
 }
 
-::ng-deep .mat-menu-panel{
-        max-width: none !important;
+::ng-deep .mat-menu-panel {
+    max-width: none !important;
 }
-mat-expansion-panel:first-child mat-expansion-panel-header{
-    background: #30ae67 ;
+
+mat-expansion-panel:first-child mat-expansion-panel-header {
+    background: #30ae67;
     font-size: 1rem;
     vertical-align: center;
-    margin-left: -4px;
+    margin-left: -0.25rem;
     box-shadow: none;
-    
 }
 
- mat-expansion-panel-header:hover{
-     background-color: #25a55d !important;
- }
+mat-expansion-panel-header:hover {
+    background-color: #25a55d !important;
+}
 
- mat-expansion-panel{
-     background-color: #30ae67;
- }
+mat-expansion-panel {
+    background-color: #30ae67;
+}
 
 
+
+
+/* Media Queries pour les écrans de taille moyenne (<= 992px) */ 
+@media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas:
+            "header"
+            "main";
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline;
+    }
+
+    .sidebar-title > span {
+        display: inline;
+    }
+}
+
+/* Media Queries pour les écrans de petite taille (<= 768px) */
+@media screen and (max-width: 768px) {
+    .main-cards, .charts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card, .charts-card {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+/* Media Queries pour les écrans de très petite taille (<= 480px) */
+@media screen and (max-width: 480px) {
+    .card, .charts-card {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Media Queries pour les écrans de taille moyenne (<= 992px) */
+@media screen and (max-width: 992px) {
+    .list,
+    mat-nav-list,
+    .mat-list-item {
+        font-size: 0.8rem !important;
+        height: auto !important;
+        padding: 10px !important;
+    }
+
+    .mat-icon {
+        margin-right: 0.5rem;
+    }
+}
+
+/* Media Queries pour les écrans de petite taille (<= 768px) */
+@media screen and (max-width: 768px) {
+    .list,
+    mat-nav-list,
+    .mat-list-item {
+        font-size: 0.7rem !important;
+        height: auto !important;
+        padding: 8px !important;
+    }
+
+    .mat-icon {
+        margin-right: 0.3rem;
+    }
+}
+
+/* Media Queries pour les écrans de très petite taille (<= 480px) */
+@media screen and (max-width: 480px) {
+    .list,
+    mat-nav-list,
+    .mat-list-item {
+        font-size: 0.6rem !important;
+        height: auto !important;
+        padding: 6px !important;
+    }
+
+    .mat-icon {
+        margin-right: 0.2rem;
+    }
+}

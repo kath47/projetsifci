@@ -17,21 +17,21 @@ button{
     background: transparent;
 }
 .user{
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .user-image{
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
 }
 .user-image-icon{
-    height: 18px;
-    font-size: 16px;
+    height: 1.125rem;
+    font-size: 1rem;
 }
 
 ::ng-deep{
     .mat-menu-content{
-        width: 160px;
+        width: 10rem;
     }
 }
