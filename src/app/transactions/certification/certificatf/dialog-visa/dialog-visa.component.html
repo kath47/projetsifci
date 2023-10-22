@@ -1,4 +1,4 @@
-<script src="src\assets\signaturepad.js"></script>
+ <!--<script src="src\assets\signaturepad.js"></script>
 <h4 mat-dialog-title>Membre de l'équipe d'enquête</h4>
 <div mat-dialog-content>
     <div class="card">
@@ -27,9 +27,36 @@
         </form>
     </div>
 </div>
-</div>
-<!--
-<div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="">Annuler</button>
-  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Enregistrer</button>
 </div>-->
+
+
+<script src="src\assets\signaturepad.js"></script>
+<h4 mat-dialog-title>Membre de l'équipe d'enquête</h4>
+<div mat-dialog-content>
+  <div class="card mx-3" style="border: none;">
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputlist" class="form-label">Nom et Prénom</label>
+        <input type="text" class="form-control form-control-sm" id="inputlist">
+      </div>
+      <div class="col-md-6">
+        <label for="inputrol" class="form-label">Fonction ou qualité</label>
+        <select id="inputrol" class="form-select form-select-sm">
+          <option selected>Choose...</option>
+          <option *ngFor="let qualite of qualite" [value]="qualite">{{qualite}}</option>
+        </select>
+      </div>
+      <div class="col-md-12" style="margin-bottom: 3.125rem;">
+        <signature-pad></signature-pad>
+        <div class="btns">
+          <button class="btn btn-info">Refaire</button>
+          <button class="btn btn-danger">Effacer</button>
+          <button class="btn btn-success">Sauvegarder</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+

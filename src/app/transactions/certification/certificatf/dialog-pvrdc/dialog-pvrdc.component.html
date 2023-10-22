@@ -1,75 +1,69 @@
 <h1 mat-dialog-title>Déclaration de personnes auditionnées</h1>
 <div mat-dialog-content>
-  <div class="card ">
+  <div class="card">
     <form class="row g-3 align-items-center my-2 mx-2">
 
-    <div class="col-md-6">
-      <label for="exampleFormControlInput1" class="form-label">Nom et prénom</label>
-      <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1">
-    </div>
-      
-    <div class="col-md-6">
-      <label for="inputrol" class="form-label">Fonction ou qualité</label>
-      <select id="inputrol" class="form-select form-select-sm">
-        <option selected>Choisir...</option>
-        <option *ngFor="let qualite of qualite" value="">{{qualite}}</option>
-      </select>
-    </div>
-
-    <div class="col-md-6">
-      <label for="inputrol" class="form-label">Nationalité</label>
-      <select id="inputrol" class="form-select form-select-sm">
-        <option selected>Choisir...</option>
-        <option *ngFor="let Nationalite of Nationalite" value="">{{Nationalite}}</option>
-      </select>
-    </div>
-
-    <div class="col-md-6">
-      <label for="exampleFormControlInput1" class="form-label">N° pièce identité</label>
-      <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1">
-    </div>
-      
-    <div class="col-md-6">
-      <button class="btn btn-outline-secondary md-6">
-      <div class="audio-record-content">
-        <div class="audio-record" *ngIf="!recording" (click)="startRecording()">
-          <p class="audio-placeholder" style="color: rgb(21, 21, 21);">
-            Cliquez pour démarrer l'enregistrement
-          </p>
-          <img src="../../../../../assets/icon/mic-mute-fill.svg" class="mic-icon" style="color: rgb(50, 28, 251);">
-        </div>
-        <div class="audio-record" *ngIf="recording" (click)="stopRecording()">
-          <p class="audio-placeholder" style="color: rgb(50, 28, 251);">
-            Cliquez pour arrêter l'enregistrement
-          </p>
-          <img src="../../../../../assets/icon/mic-fill.svg" class="mic-icon">
-        </div>
-        <audio class="audio-file" controls *ngIf="url">
-          <source [src]="sanitize(url)" type="audio/wav">
-        </audio> 
+      <div class="col-md-6">
+        <label for="exampleFormControlInput1" class="form-label">Nom et prénom</label>
+        <input type="email" class="form-control form-control-sm" id="exampleFormControlInput1">
       </div>
-      </button>
-    </div>
 
-    <div class="col-md-12 my-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Déclaration</label>
-      <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
+      <div class="col-md-6">
+        <label for="inputrol1" class="form-label">Fonction ou qualité</label>
+        <select id="inputrol1" class="form-select form-select-sm">
+          <option selected>Choisir...</option>
+          <option *ngFor="let qualite of qualite" value="{{ qualite }}">{{ qualite }}</option>
+        </select>
+      </div>
 
-  <div class="col-md-6">
-    <button type="button" class="btn btn-secondary btn-sm">Annuler</button>
+      <div class="col-md-6">
+        <label for="inputrol2" class="form-label">Nationalité</label>
+        <select id="inputrol2" class="form-select form-select-sm">
+          <option selected>Choisir...</option>
+          <option *ngFor="let Nationalite of Nationalite" value="{{ Nationalite }}">{{ Nationalite }}</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="exampleFormControlInput2" class="form-label">N° pièce identité</label>
+        <input type="email" class="form-control form-control-sm" id="exampleFormControlInput2">
+      </div>
+
+      <div class="col-md-6">
+        <button class="btn btn-outline-secondary md-6">
+          <div class="audio-record-content">
+            <div class="audio-record" *ngIf="!recording" (click)="startRecording()">
+              <p class="audio-placeholder" style="color: rgb(21, 21, 21);">
+                Cliquez pour démarrer l'enregistrement
+              </p>
+              <img src="../../../../../assets/icon/mic-mute-fill.svg" class="mic-icon" style="color: rgb(50, 28, 251);">
+            </div>
+            <div class="audio-record" *ngIf="recording" (click)="stopRecording()">
+              <p class="audio-placeholder" style="color: rgb(50, 28, 251);">
+                Cliquez pour arrêter l'enregistrement
+              </p>
+              <img src="../../../../../assets/icon/mic-fill.svg" class="mic-icon">
+            </div>
+            <audio class="audio-file" controls *ngIf="url">
+              <source [src]="sanitize(url)" type="audio/wav">
+            </audio> 
+          </div>
+        </button>
+      </div>
+
+      <div class="col-md-12 my-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Déclaration</label>
+        <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <div class="col-md-6">
+        <button type="button" class="btn btn-secondary btn-sm">Annuler</button>
+      </div>
+
+      <div class="col-md-6">
+        <button type="button" class="btn btn-secondary btn-sm">Sauvegarder</button>
+      </div>
+
+    </form>
   </div>
-
-    <div class="col-md-6">
-      <button type="button" class="btn btn-secondary btn-sm">Sauvegarder</button>
-  </div>
-  </form>
-  </div>
-  </div>
-
-
-
-
-
-
-
+</div>

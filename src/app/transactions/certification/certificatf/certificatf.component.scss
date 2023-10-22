@@ -137,18 +137,24 @@ section{
  }
 
  #input-nni{
-     margin-bottom: 15px;
-     height: 60px;
+     margin-bottom: 0.938rem;
+     height: 3.75rem;
      
  }
-
+#btnimp, #btnsauv{
+ 
+  height: 0.938rem;
+  float:left;
+  margin-top: 20px;
+  display:inline;
+}
  #btncmu{
   background-color: #30ae67;
   text-align: center;
   align-content: center;
   color: white;
-  height: 28px;
-  width: 40px;
+  height: 1.75rem;
+  width: 2.5rem;
  }
 
  #btncmu:hover{
@@ -157,7 +163,7 @@ section{
 
  #btn-nni{
   width: 30px;
-  height: 15px;
+  height: 0.938rem;
   float:left;
   margin-top: 27px;
   display:inline;

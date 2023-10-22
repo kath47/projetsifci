@@ -1,25 +1,24 @@
-
-
 .input-container {
     display: flex;
     align-items: center;
-    max-width: 50px;
+    max-width: 3.125rem;
 }
 
 input[type="text"] {
     width: 100%;
-    padding: 5px;
+    padding: 0.313rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     font-size: 16px;
 }
 
 .mic-icon {
     font-size: 18px;
-    margin-left: 100px;
+    margin-left: 3.125rem; /* Ajusté pour un meilleur positionnement */
     cursor: pointer;
 }
 
-.audio-placeholder, label{
+.audio-placeholder,
+label {
     font-size: 12px;
 }

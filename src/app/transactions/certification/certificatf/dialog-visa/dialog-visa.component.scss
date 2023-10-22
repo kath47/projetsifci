@@ -1,34 +1,35 @@
 
-label{
-    font-size: 12px;
-}
-signature-pad{
-    background-color: white;
-    cursor: crosshair;
-    width: 150%;
-    height: 100%;
-    
+label {
+    font-size: 0.75rem;
 }
 
-.btns{
+signature-pad {
+    background-color: white;
+    cursor: crosshair;
+    width: 100%; /* Modifier la largeur selon les besoins */
+    height: 100%;
+}
+
+.btns {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 0.5rem;
-    padding-top: 5px;
+    padding-top: 0.313rem;
     align-items: center;
     margin-left: 50%;
+    transform: translateX(-50%); /* Pour centrer le contenu */
 }
-.btns button{
-    
-    border: 1px solid #eef0f0;
-    border-radius: 4px;
-    box-shadow: rgba(237, 240, 240, 0.5) 0 2px 5px 0;
+
+.btns button {
+    border: 0.063rem solid #eef0f0;
+    border-radius: 0.25rem;
+    box-shadow: rgba(237, 240, 240, 0.5) 0 0.125rem 0.313rem 0;
     box-sizing: border-box;
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
-    padding: 0 5px 0 6px;
+    padding: 0 0.313rem 0 0.375rem;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -36,15 +37,14 @@ signature-pad{
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
-    margin: 0 10px;
-    
+    margin: 0 0.625rem;
 }
 
-.btn1{
+.btn1 {
     background-color: rgb(61, 167, 243);
 }
 
-.btn3{
+.btn3 {
     background-color: #30ae30;
 }
 
