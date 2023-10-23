@@ -48,6 +48,7 @@ import { DialogPvrdcComponent } from './transactions/certification/certificatf/d
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TbCfComponent } from './tb-cf/tb-cf.component';
 import { TbDtvComponent } from './tb-dtv/tb-dtv.component';
+import { ListepresenceComponent } from './transactions/certification/certificatf/listepresence/listepresence.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { TbDtvComponent } from './tb-dtv/tb-dtv.component';
     DialogPvrdcComponent,
     DashboardComponent,
     TbCfComponent,
-    TbDtvComponent
+    TbDtvComponent,
+    ListepresenceComponent
   ],
   
   

@@ -367,16 +367,99 @@
 
                                <!-- Etape 3 du processus-->
                                <mat-step [stepControl]="thirdFormGroup" >
-                                <form action="">
+                                
+                                  <div class="card ">
+                                    <div class="card-header text-center">Le bien foncier rural objet du présent constat est limité :</div>
+                                    <div class="card-body">
+                                      <form class="row g-3 ">
+                                      <div class="col-md-3">
+                                        <label for="inputAdress" class="form-label">Au Nord par</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+                                      <div class="col-md-3">
+                                        <label for="inputAdress" class="form-label">Au Sud par</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+                                      <div class="col-md-3">
+                                        <label for="inputAdress" class="form-label">à l'Ouest par</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+                                      <div class="col-md-3">
+                                        <label for="inputAdress" class="form-label">à l'Est par</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                      </div>
+                                    </form>
+                                    </div>
+                                  </div>
 
-                                  <div>
-                                    <button mat-raised-button (click)="openDialog2()">Déclaration</button>
+                                    <div class="card my-3">
+                                      <div class="row  text-center">
+                                      <div class="col-md-8 my-3">
+                                        <button type="button" class="btn btn-outline-success btn-sm" (click)="openDialog3()">Liste des parties présentes lors du constat de limites </button>
+                                      </div>
+                                      <div class="col-md-4 my-3" style="justify-content: right !important;">
+                                        <button type="button" class="btn btn-success btn-sm" >Sauvegarder</button>
+                                      </div>
+                                    </div>
+                                      <table class="table ">
+                                        <thead class="thead-secondary">
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nom et Prénom</th>
+                                            <th scope="col">Qualité</th>
+                                            <th scope="col">Village</th>
+                                            <th scope="col">Signature</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">4</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">5</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">6</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <div class="row text-center">
+                                      <div class="col-md-6">
+                                      <button  class="btn-retour3" mat-button matStepperPrevious>Retour</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <button class="btn-suivant3" mat-button matStepperNext>Suivant</button>
+                                    </div>
                                   </div>
-                                  <div>
-                                    <button  class="btn-retour2" mat-button matStepperPrevious>Retour</button>
-                                    <button class="btn-suivant2" mat-button matStepperNext>Suivant</button>
                                   </div>
-                                </form>
+
                               </mat-step>
                                
                               <!-- Etape 4 du processus-->
@@ -387,8 +470,8 @@
                                       <input matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
                                     </mat-form-field>
                                     <div>
-                                      <button class="btn-retour" mat-button matStepperPrevious>Retour</button>
-                                      <button class="btn-suivant" mat-button matStepperNext>Suivant</button>
+                                      <button class="btn-retour4" mat-button matStepperPrevious>Retour</button>
+                                      <button class="btn-suivant4" mat-button matStepperNext>Suivant</button>
                                     </div>
                                   </form>
                                 </mat-step>

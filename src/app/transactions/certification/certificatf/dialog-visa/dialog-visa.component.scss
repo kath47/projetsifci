@@ -6,7 +6,7 @@ label {
 signature-pad {
     background-color: white;
     cursor: crosshair;
-    width: 100%; /* Modifier la largeur selon les besoins */
+    width: 100%; 
     height: 100%;
 }
 
@@ -18,7 +18,7 @@ signature-pad {
     padding-top: 0.313rem;
     align-items: center;
     margin-left: 50%;
-    transform: translateX(-50%); /* Pour centrer le contenu */
+    transform: translateX(-50%); 
 }
 
 .btns button {

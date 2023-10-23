@@ -7,6 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogPvrdcComponent } from './dialog-pvrdc/dialog-pvrdc.component';
 import { DialogVisaComponent } from './dialog-visa/dialog-visa.component';
+import { ListepresenceComponent } from './listepresence/listepresence.component';
 
 @Component({
   selector: 'app-certificatf',
@@ -38,14 +39,21 @@ export class CertificatfComponent implements AfterViewInit {
 
   openDialog1() { 
     this._dialog.open(DialogPvrdcComponent, {
-      width: '600px', 
-      height:'550px',
+      width: '37.5rem', 
+      height:'34.375rem',
     });
   }
   openDialog2() { 
     this._dialog.open(DialogVisaComponent,  {
-      width: '400px', 
-      height:'420px',
+      width: '25rem', 
+      height:'26.25rem',
+    });
+  }
+
+  openDialog3() { 
+    this._dialog.open(ListepresenceComponent,  {
+      width: '24rem', 
+      height:'28rem',
     });
   }
 

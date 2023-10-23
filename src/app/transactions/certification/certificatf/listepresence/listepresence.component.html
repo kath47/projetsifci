@@ -1,0 +1,32 @@
+<div class="card mx-2 my-2">
+    <div class="card-header text-center">Ajouter un participants au constat de limites</div>
+    <form class="row g-3 mx-2 my-2">
+        <div class="col-md-12">
+          <label for="Input">Nom et prénoms</label>
+          <input type="text" class="form-control form-control-sm" id="Input">
+        </div>
+        <div class="col-md-6">
+            <label for="inputqual" class="form-label">Qualité</label>
+            <select id="inputqual" class="form-select form-select-sm">
+              <option selected>Choisir...</option>
+              <option *ngFor="let qualite of qualite" value="">{{qualite}}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="inputvillag" class="form-label">Village</label>
+            <select id="inputvillag" class="form-select form-select-sm">
+              <option selected>Choisir...</option>
+              <option *ngFor="let village of village" value="">{{village}}</option>
+            </select>
+          </div>
+          <signature-pad>
+
+          </signature-pad>
+          <div class="col-6 text-center">
+            <button type="button" class="btn btn-secondary btn-sm">Effacer</button>
+        </div>
+          <div class="col-6 text-center">
+        <button type="submit" class="btn btn-success btn-sm">Sauvegarder</button>
+    </div>
+      </form>
+</div>

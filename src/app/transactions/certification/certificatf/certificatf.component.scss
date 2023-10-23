@@ -15,7 +15,7 @@ section{
  .droite {
     width: 100% ;
     height: 100% !important;
-    margin-left: 15px;
+    margin-left: 0.938rem;
   }
 
   .card-droite{
@@ -23,7 +23,7 @@ section{
   }
 
   mat-step > .label{
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   mat-card-header{
@@ -32,11 +32,11 @@ section{
   mat-card-title{
     text-align: center;
     vertical-align: center;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   label{
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   @media screen and (max-width:640px) {
@@ -54,7 +54,7 @@ section{
 
    mat-form-field,.matInput{
     margin: 0.5%;
-    height: 57px !important;
+    height: 3.563rem !important;
     //font-size: 14px;
    }
    .uploadfile{
@@ -89,7 +89,7 @@ section{
  }
 
  input[type=file]::file-selector-button{
-  margin-right: 20px;
+  margin-right: 1.25rem;
   border: none;
   background: #30ae67;
   padding: 3px 7px;
@@ -162,7 +162,7 @@ section{
  }
 
  #btn-nni{
-  width: 30px;
+  width: 1.875rem;
   height: 0.938rem;
   float:left;
   margin-top: 27px;
@@ -194,7 +194,7 @@ section{
  
 
 .form-control, .form-select{
-  height: 28px;
+  height: 1.75rem;
   font-size: 12px;
 }
 
@@ -203,7 +203,7 @@ section{
 
 .overflow-scroll{
   width: 50%;
-  height: 245px;
+  height: 15.313rem;
 }
 
 .rdc-visa{
@@ -217,4 +217,16 @@ section{
 .card-header{
   font-size: 14px;
 }
+.btn-suivant3{
+  background-color: #fb9101;
+  height: 1.5rem;
+  color: white;
+  margin-left: 50%;
+  margin-bottom: 1rem;
+}
 
+.btn-retour3{
+  height: 1.5rem;
+  margin-left: -50%;
+  margin-bottom: 1rem;
+}
