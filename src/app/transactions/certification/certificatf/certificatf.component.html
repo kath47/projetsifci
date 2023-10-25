@@ -84,12 +84,12 @@
                                       </svg></button>
                                     </div>
 
-                                    <div class="col-md-2" id="btnsauv">
-                                      <button class="btn" >Sauvegarger</button>
+                                    <div class="col-md-4 mx-4 text-end"  id="btnsauv1">
+                                      <button class="btn btn-secondary btn-sm" >Imprimer</button>
                                     </div>
 
-                                    <div class="col-md-4" id="btnimp">
-                                      <button class="btn" >Imprimer</button>
+                                    <div class="col-md-2 mx-4 " id="btnimp1">
+                                      <button class="btn btn-success btn-sm" >Sauvegarder</button>
                                     </div>
                                   </div>
                                   </div>
@@ -392,15 +392,17 @@
                                     </div>
                                   </div>
 
-                                    <div class="card my-3">
+                                    <div class="card my-2">
                                       <div class="row  text-center">
-                                      <div class="col-md-8 my-3">
+                                      <div class="col-md-6 my-3">
                                         <button type="button" class="btn btn-outline-success btn-sm" (click)="openDialog3()">Liste des parties présentes lors du constat de limites </button>
                                       </div>
-                                      <div class="col-md-4 my-3" style="justify-content: right !important;">
-                                        <button type="button" class="btn btn-success btn-sm" >Sauvegarder</button>
+                                      <div class="col-md-6 my-2" style="justify-content: right !important;">
+                                        <button type="button" class="btn btn-secondary btn-sm " style="height: 2rem; margin-top: 0.50rem; margin-left: -1.5rem;">imprimer</button>
+                                        <button type="button" class="btn btn-success btn-sm mx-3" style="height: 2rem; margin-top: 0.50rem;">Sauvegarder</button>
                                       </div>
                                     </div>
+                                    <div class="overflow-scroll" style="width: 100%;">
                                       <table class="table ">
                                         <thead class="thead-secondary">
                                           <tr>
@@ -450,7 +452,8 @@
                                           </tr>
                                         </tbody>
                                       </table>
-                                      <div class="row text-center">
+                                    </div>
+                                      <div class="row text-center my-2">
                                       <div class="col-md-6">
                                       <button  class="btn-retour3" mat-button matStepperPrevious>Retour</button>
                                     </div>
@@ -463,21 +466,58 @@
                               </mat-step>
                                
                               <!-- Etape 4 du processus-->
-                                <mat-step [stepControl]="thirdFormGroup">
-                                  <form [formGroup]="thirdFormGroup">
-                                    <mat-form-field>
-                                      <mat-label>Phone number</mat-label>
-                                      <input matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
-                                    </mat-form-field>
+                                <mat-step [stepControl]="thirdFormGroup" id="stepControl">
+                                  <div class="card">
+                                  <div class="card-header">
+                                    <form class="row g-3">
+                                      <div class="col-md-4">
+                                        <button class="btn btn-secondary btn-sm text-center" id="btnnew4"><span class="material-icons md-12 text-center">add_circle</span>&nbsp; Nouvel annonce</button>
+                                      </div>
+                                      <div class="col-md-8  d-flex " id="btn4">
+                                        <button class="btn btn-secondary btn-sm " id="btnnew4">Imprimer</button>
+                                     
+                                        <button class="btn btn-secondary btn-sm mx-3" id="btnnew4"><span class="material-icons md-12 text-center">add_circle</span>&nbsp;Liste de présence</button>
+                                      </div>
+                                      
+
+                                    </form>
+                                  </div>
+                                  <form class="row g-3 mx-2 my-2">
+                                    <div class="col-md-2">
+                                      <label for="inputAdress" class="form-label">N° PV ouverture </label>
+                                      <input type="number" class="form-control form-control-sm" id="inputAdress">
+                                    </div>
+                                  <div class="col-md-2">
+                                    <label for="inputAdress" class="form-label">Date </label>
+                                    <input type="date" class="form-control form-control-sm" id="inputAdress">
+                                  </div>
+                                  <div class="col-md-3">
+                                    <label for="inputrol" class="form-label">Commissaire enquêteur</label>
+                                    <select id="inputrol" class="form-select form-select-sm">
+                                      <option selected>Choose...</option>
+                                      <option *ngFor="let cenq of cenq" value="">{{cenq}}</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <label for="inputAdress" class="form-label">Superficie (en hectare) </label>
+                                    <input type="text" class="form-control form-control-sm" id="inputAdress">
+                                  </div>
+                                  
+                                </form>
                                     <div>
                                       <button class="btn-retour4" mat-button matStepperPrevious>Retour</button>
                                       <button class="btn-suivant4" mat-button matStepperNext>Suivant</button>
                                     </div>
-                                  </form>
+                                  
+                                </div>
+                                </mat-step>
+                                <mat-step [stepControl]="thirdFormGroup" id="stepControl">
+
+
                                 </mat-step>
                                 <mat-step>
-                                  <ng-template matStepLabel>Done</ng-template>
-                                  <p>You are now done.</p>
+                                  <ng-template matStepLabel>Terminé</ng-template>
+                                  <p>Terminé.</p>
                                   <div>
                                     <button mat-button matStepperPrevious>Retour</button>
                                   </div>
