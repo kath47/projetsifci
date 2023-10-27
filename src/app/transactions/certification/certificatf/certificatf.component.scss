@@ -243,14 +243,26 @@ section{
 
 /* partie 4 */
 
-span,#btnnew4{
+#btnnew4{
   display: flex;
   height: 1.85rem;
   text-justify: auto;
-  
+
+}
+
+#btnn4{
+  display: flex;
 }
 
 #btn4{
-  //position: relative;
-  margin-right: 7rem;
+  display: flex;
+  margin-left: 8rem;
+}
+
+.bi{
+  font-size: 1.05rem;
+}
+
+.btn-suivant4{
+  align-content: flex-end;
 }

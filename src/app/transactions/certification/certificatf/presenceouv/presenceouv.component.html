@@ -1,0 +1,26 @@
+<div class="card mx-2 my-2">
+    <div class="card-header text-center">Ajouter un participants à l'ouverture de publicité</div>
+    <form class="row g-3 mx-2 my-2">
+        <div class="col-md-12">
+          <label for="Input">Nom et prénoms</label>
+          <input type="text" class="form-control form-control-sm" id="Input">
+        </div>
+        <div class="col-md-12">
+            <label for="inputqual" class="form-label">Fonction/qualité</label>
+            <select id="inputqual" class="form-select form-select-sm">
+              <option selected>Choisir...</option>
+              <option *ngFor="let qualite of qualite" value="">{{qualite}}</option>
+            </select>
+          </div>
+          <signature-pad>
+
+          </signature-pad>
+          <div class="col-6 text-center">
+            <button type="button" class="btn btn-secondary btn-sm">Effacer</button>
+        </div>
+          <div class="col-6 text-center">
+        <button type="submit" class="btn btn-success btn-sm">Sauvegarder</button>
+    </div>
+      </form>
+</div>
+

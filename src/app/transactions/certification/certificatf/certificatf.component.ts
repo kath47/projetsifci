@@ -8,6 +8,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogPvrdcComponent } from './dialog-pvrdc/dialog-pvrdc.component';
 import { DialogVisaComponent } from './dialog-visa/dialog-visa.component';
 import { ListepresenceComponent } from './listepresence/listepresence.component';
+import { AnnoncepubComponent } from './annoncepub/annoncepub.component';
+import { PresenceouvComponent } from './presenceouv/presenceouv.component';
 
 @Component({
   selector: 'app-certificatf',
@@ -52,6 +54,20 @@ export class CertificatfComponent implements AfterViewInit {
 
   openDialog3() { 
     this._dialog.open(ListepresenceComponent,  {
+      width: '24rem', 
+      height:'28rem',
+    });
+  }
+
+  openDialog4() { 
+    this._dialog.open(AnnoncepubComponent,  {
+      width: '24rem', 
+      height:'28rem',
+    });
+  }
+
+  openDialog5() { 
+    this._dialog.open(PresenceouvComponent,  {
       width: '24rem', 
       height:'28rem',
     });

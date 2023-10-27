@@ -466,55 +466,99 @@
                               </mat-step>
                                
                               <!-- Etape 4 du processus-->
-                                <mat-step [stepControl]="thirdFormGroup" id="stepControl">
-                                  <div class="card">
+                              <mat-step [stepControl]="thirdFormGroup" id="stepControl">
+                                <div class="card">
                                   <div class="card-header">
-                                    <form class="row g-3">
-                                      <div class="col-md-4">
-                                        <button class="btn btn-secondary btn-sm text-center" id="btnnew4"><span class="material-icons md-12 text-center">add_circle</span>&nbsp; Nouvel annonce</button>
+                                    <div class="row g-4">
+                                      <div class="col-md-6" id="btnn4">
+                                        <button class="btn btn-secondary btn-sm text-center" id="btnnew4" (click)="openDialog4()"><i class="bi bi-plus-circle"></i>&nbsp; Nouvel annonce</button>
+                                        <button class="btn btn-secondary btn-sm mx-3" id="btnnew4" (click)="openDialog5()"><i class="bi bi-plus-circle"></i>&nbsp; Liste de présence</button>
                                       </div>
-                                      <div class="col-md-8  d-flex " id="btn4">
-                                        <button class="btn btn-secondary btn-sm " id="btnnew4">Imprimer</button>
-                                     
-                                        <button class="btn btn-secondary btn-sm mx-3" id="btnnew4"><span class="material-icons md-12 text-center">add_circle</span>&nbsp;Liste de présence</button>
+                                      <div class="col-md-4 " id="btn4">
+                                        <button class="btn btn-secondary btn-sm" id="btnnew4">Imprimer</button>
+                                        <button class="btn btn-success btn-sm mx-3" id="btnnew4"> Enregistrer</button>
                                       </div>
-                                      
-
-                                    </form>
+                                    </div>
                                   </div>
                                   <form class="row g-3 mx-2 my-2">
                                     <div class="col-md-2">
-                                      <label for="inputAdress" class="form-label">N° PV ouverture </label>
-                                      <input type="number" class="form-control form-control-sm" id="inputAdress">
+                                      <label for="inputPV" class="form-label">N° PV ouverture </label>
+                                      <input type="number" class="form-control form-control-sm" id="inputPV">
                                     </div>
-                                  <div class="col-md-2">
-                                    <label for="inputAdress" class="form-label">Date </label>
-                                    <input type="date" class="form-control form-control-sm" id="inputAdress">
-                                  </div>
-                                  <div class="col-md-3">
-                                    <label for="inputrol" class="form-label">Commissaire enquêteur</label>
-                                    <select id="inputrol" class="form-select form-select-sm">
-                                      <option selected>Choose...</option>
-                                      <option *ngFor="let cenq of cenq" value="">{{cenq}}</option>
-                                    </select>
-                                  </div>
-                                  <div class="col-md-3">
-                                    <label for="inputAdress" class="form-label">Superficie (en hectare) </label>
-                                    <input type="text" class="form-control form-control-sm" id="inputAdress">
-                                  </div>
-                                  
-                                </form>
-                                    <div>
-                                      <button class="btn-retour4" mat-button matStepperPrevious>Retour</button>
-                                      <button class="btn-suivant4" mat-button matStepperNext>Suivant</button>
+                                    <div class="col-md-2">
+                                      <label for="inputDate" class="form-label">Date </label>
+                                      <input type="date" class="form-control form-control-sm" id="inputDate">
                                     </div>
-                                  
+                                    <div class="col-md-3">
+                                      <label for="inputCommissaire" class="form-label">Commissaire enquêteur</label>
+                                      <select id="inputCommissaire" class="form-select form-select-sm">
+                                        <option selected>Choose...</option>
+                                        <option *ngFor="let cenq of cenq" value="{{cenq}}">{{cenq}}</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <label for="inputSuperficie" class="form-label">Superficie (en hectare) </label>
+                                      <input type="text" class="form-control form-control-sm" id="inputSuperficie">
+                                    </div>
+
+                                    <div class="card" style="border: none;">
+                                      <table class="table table-bordered">
+                                        <thead class="table-secondary text-center">
+                                          <tr>
+                                            <th scope="col">N°</th>
+                                            <th scope="col">Nom et Prénoms</th>
+                                            <th scope="col">Qualité</th>
+                                            <th scope="col">Signature</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td >Larry the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">4</th>
+                                            <td >Larry Bird</td>
+                                            <td>@twitter</td>
+                                            <td>Thornton</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">5</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">6</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </form>
+                                  <div>
+                                    <button class="btn-retour4" mat-button matStepperPrevious>Retour</button>
+                                    <button class="btn-suivant4" mat-button matStepperNext>Suivant</button>
+                                  </div>
                                 </div>
-                                </mat-step>
-                                <mat-step [stepControl]="thirdFormGroup" id="stepControl">
-
-
-                                </mat-step>
+                              </mat-step>
+                              
                                 <mat-step>
                                   <ng-template matStepLabel>Terminé</ng-template>
                                   <p>Terminé.</p>

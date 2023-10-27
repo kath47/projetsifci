@@ -49,6 +49,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TbCfComponent } from './tb-cf/tb-cf.component';
 import { TbDtvComponent } from './tb-dtv/tb-dtv.component';
 import { ListepresenceComponent } from './transactions/certification/certificatf/listepresence/listepresence.component';
+import { PresenceouvComponent } from './transactions/certification/certificatf/presenceouv/presenceouv.component';
+import { AnnoncepubComponent } from './transactions/certification/certificatf/annoncepub/annoncepub.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,9 @@ import { ListepresenceComponent } from './transactions/certification/certificatf
     DashboardComponent,
     TbCfComponent,
     TbDtvComponent,
-    ListepresenceComponent
+    ListepresenceComponent,
+    PresenceouvComponent,
+    AnnoncepubComponent
   ],
   
   
